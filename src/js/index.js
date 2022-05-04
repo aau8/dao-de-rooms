@@ -3,6 +3,45 @@ import "./render.js";
 // import "./menu.js";
 import "./modals.js";
 
+// Меню
+window.addEventListener('resize', menu)
+
+menu()
+function menu() {
+    if (window.innerWidth <= 1100) {
+        const menu = document.querySelector('.menu')
+        const burger = document.querySelector('.burger')
+        let menuActive = false;
+        
+        burger.addEventListener("click", (e) => {
+        
+            if (!menuActive) {
+                burger.classList.add('_activeAnim')
+                menu.classList.toggle('_show')
+        
+                setTimeout(e => {
+                    burger.classList.remove('_deactive')
+                    burger.classList.add('_active')
+                    burger.classList.remove('_activeAnim')
+                }, 300)
+                menuActive = true;
+            } else {
+                burger.classList.add('_deactiveAnim')
+                menu.classList.toggle('_show')
+                
+                setTimeout(e => {
+                    burger.classList.remove('_active')
+                    burger.classList.add('_deactive')
+                    burger.classList.remove('_deactiveAnim')
+                }, 400)
+                menuActive = false;
+            }
+        
+            bodyLock()
+        });
+    }
+}
+
 // Стрелка "Наверх"
 // document.querySelector(".back-to-top").addEventListener("click", (e) => {
 //     window.scrollBy(0, -window.scrollY);

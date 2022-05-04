@@ -5,19 +5,244 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header"></header>
-		<main class="main"></main>
-		<div class="content">
-            <img src="@img/main-logo.png" alt="" use-webp>
-        </div>
-		<footer class="footer"></footer>
-        <!-- @@include('./modules/footer.html') -->
-	</div>
+        <main class="main">
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrap">
+                        <a href="#" class="logo header__logo"><img src="@img/logo.svg" alt=""></a>
+                        <nav class="menu">
+                            <div class="menu__wrap">
+                                <ul class="menu__list">
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">Галерея</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu__link _active" href="#">
+                                            <span class="menu__link-text">Апатраменты</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">Аренда</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">Дополнительно</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="logo menu__logo"><img src="@img/logo.svg" alt=""></a>
+                                <ul class="menu__list">
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">Контакты</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">Сотрудничество</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">FAQ</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu__link" href="#">
+                                            <span class="menu__link-text">Личный кабинет</span> 
+                                            <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <button class="burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <div class="main__wrap">
+                    <div class="main__bg"><img src="./img/main-bg.png" alt=""></div>
+                    <div class="main__row main__row-empty"></div>
+                    <div class="main__content">
+                        <h1 class="main__title">Dao dé Rooms</h1>
+                        <p class="main__text">Оазис на пути путешественника</p>
+                    </div>
+                    <div class="main__row">
+                        <div class="w-book">
 
-    <script src="./js/bundle.min.js"></script>
-</body>
-</html>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="content">
+            <section class="section section_theme-dark s-history">
+                <div class="container">
+                    <div class="s-history__wrap">
+                        <div class="s-header s-history__header">
+                            <div class="s-header__content">
+                                <h2 class="s-header__title">История создания</h2>
+                                <p class="s-header__text">Dao dé Rooms – это синтез многолетнего опыта и искренней любви к путешествиям, в них мы постарались объединить все самое лучшее, что мы встречали в отелях и апартаментах по всему миру. Мы загорелись идеей создать идеальное место, в которое хочется возвращаться.</p>
+                            </div>
+                        </div>
+                        <div class="s-history__body">
+                            <div class="c-room">
+                                <div class="c-room__img"><img src="./img/rooms/oriental-fusion.png" alt=""></div>
+                                <div class="c-room__body">
+                                    <div class="c-room__content">
+                                        <h3 class="c-room__title">Oriental Fusion</h3>
+                                        <div class="c-room__location">
+                                            <div class="c-room__location-icon"><img src="./img/icons/location.svg" alt=""></div>
+                                            <span class="c-room__location-text">Тигровая улица 16а</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-room__style" data-style-room="Азиатский стиль"><img src="./img/rooms/style/asia.png" alt=""></div>
+                                </div>
+                                <div class="c-room__footer">
+                                    <div class="c-room__price"><span>5 000</span> ₽ за ночь</div>
+                                    <a href="#" class="c-room__more">
+                                        <span class="c-room__more-text">Подробнее</span>
+                                        <span class="c-room__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-room">
+                                <div class="c-room__img"><img src="./img/rooms/oriental-fusion.png" alt=""></div>
+                                <div class="c-room__body">
+                                    <div class="c-room__content">
+                                        <h3 class="c-room__title">Oriental Fusion</h3>
+                                        <div class="c-room__location">
+                                            <div class="c-room__location-icon"><img src="./img/icons/location.svg" alt=""></div>
+                                            <span class="c-room__location-text">Тигровая улица 16а</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-room__style" data-style-room="Азиатский стиль"><img src="./img/rooms/style/asia.png" alt=""></div>
+                                </div>
+                                <div class="c-room__footer">
+                                    <div class="c-room__price"><span>5 000</span> ₽ за ночь</div>
+                                    <a href="#" class="c-room__more">
+                                        <span class="c-room__more-text">Подробнее</span>
+                                        <span class="c-room__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-room">
+                                <div class="c-room__img"><img src="./img/rooms/oriental-fusion.png" alt=""></div>
+                                <div class="c-room__body">
+                                    <div class="c-room__content">
+                                        <h3 class="c-room__title">Oriental Fusion</h3>
+                                        <div class="c-room__location">
+                                            <div class="c-room__location-icon"><img src="./img/icons/location.svg" alt=""></div>
+                                            <span class="c-room__location-text">Тигровая улица 16а</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-room__style" data-style-room="Азиатский стиль"><img src="./img/rooms/style/asia.png" alt=""></div>
+                                </div>
+                                <div class="c-room__footer">
+                                    <div class="c-room__price"><span>5 000</span> ₽ за ночь</div>
+                                    <a href="#" class="c-room__more">
+                                        <span class="c-room__more-text">Подробнее</span>
+                                        <span class="c-room__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-room">
+                                <div class="c-room__img"><img src="./img/rooms/oriental-fusion.png" alt=""></div>
+                                <div class="c-room__body">
+                                    <div class="c-room__content">
+                                        <h3 class="c-room__title">Oriental Fusion</h3>
+                                        <div class="c-room__location">
+                                            <div class="c-room__location-icon"><img src="./img/icons/location.svg" alt=""></div>
+                                            <span class="c-room__location-text">Тигровая улица 16а</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-room__style" data-style-room="Азиатский стиль"><img src="./img/rooms/style/asia.png" alt=""></div>
+                                </div>
+                                <div class="c-room__footer">
+                                    <div class="c-room__price"><span>5 000</span> ₽ за ночь</div>
+                                    <a href="#" class="c-room__more">
+                                        <span class="c-room__more-text">Подробнее</span>
+                                        <span class="c-room__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-room">
+                                <div class="c-room__img"><img src="./img/rooms/oriental-fusion.png" alt=""></div>
+                                <div class="c-room__body">
+                                    <div class="c-room__content">
+                                        <h3 class="c-room__title">Oriental Fusion</h3>
+                                        <div class="c-room__location">
+                                            <div class="c-room__location-icon"><img src="./img/icons/location.svg" alt=""></div>
+                                            <span class="c-room__location-text">Тигровая улица 16а</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-room__style" data-style-room="Азиатский стиль"><img src="./img/rooms/style/asia.png" alt=""></div>
+                                </div>
+                                <div class="c-room__footer">
+                                    <div class="c-room__price"><span>5 000</span> ₽ за ночь</div>
+                                    <a href="#" class="c-room__more">
+                                        <span class="c-room__more-text">Подробнее</span>
+                                        <span class="c-room__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-room">
+                                <div class="c-room__img"><img src="./img/rooms/oriental-fusion.png" alt=""></div>
+                                <div class="c-room__body">
+                                    <div class="c-room__content">
+                                        <h3 class="c-room__title">Oriental Fusion</h3>
+                                        <div class="c-room__location">
+                                            <div class="c-room__location-icon"><img src="./img/icons/location.svg" alt=""></div>
+                                            <span class="c-room__location-text">Тигровая улица 16а</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-room__style" data-style-room="Азиатский стиль"><img src="./img/rooms/style/asia.png" alt=""></div>
+                                </div>
+                                <div class="c-room__footer">
+                                    <div class="c-room__price"><span>5 000</span> ₽ за ночь</div>
+                                    <a href="#" class="c-room__more">
+                                        <span class="c-room__more-text">Подробнее</span>
+                                        <span class="c-room__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-history__scribble s-history__scribble-top">
+                            <svg width="767" height="284" viewBox="0 0 767 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M269.596 64.6296C155.677 75.1618 -54.9308 116.908 13.9953 199.634C100.153 303.041 645.817 193.889 663.049 119.206C680.28 44.5226 487.862 -33.0331 306.931 15.7982C126 64.6296 48.4582 271.445 361.497 282.934C611.929 292.126 735.804 194.846 766.438 145.058" stroke="#CBBDAE" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="s-history__scribble s-history__scribble-bottom">
+                            <svg width="767" height="284" viewBox="0 0 767 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M269.596 64.6296C155.677 75.1618 -54.9308 116.908 13.9953 199.634C100.153 303.041 645.817 193.889 663.049 119.206C680.28 44.5226 487.862 -33.0331 306.931 15.7982C126 64.6296 48.4582 271.445 361.497 282.934C611.929 292.126 735.804 194.846 766.438 145.058" stroke="#CBBDAE" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+@@include('./modules/footer.html')

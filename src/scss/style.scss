@@ -10,10 +10,10 @@ html {
 body {
     font-family: $ff-main;
     color: $text-primary;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.5;
 
     &._lock {
         overflow: hidden;
@@ -44,11 +44,15 @@ body {
 
 // Компоненты
 @import "./components/modals/modal";
+@import "./components/section";
+@import "./components/cards/room";
 
 // Текстовые компоненты
 @import "./components/text";
 
 // Секции
 @import "./sections/header";
+@import "./sections/menu";
 @import "./sections/main";
+@import "./sections/s-history";
 @import "./sections/footer";

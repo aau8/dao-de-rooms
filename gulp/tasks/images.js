@@ -24,5 +24,8 @@ export default function imagesBuild () {
             webp()
         ))
         .pipe(gulp.dest(app.path.build.images))
+
+        .pipe(gulp.src(app.path.src.svg))
+        .pipe(gulp.dest(app.path.build.images))
         .pipe(browserSync.reload({ stream: true }));
 }

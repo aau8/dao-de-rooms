@@ -1,107 +1,137 @@
 import { removeAll, isWebp } from "./utilities/functions.js"
 
-// Плейсхолдер текстовых полей
-// labelTextfield()
-function labelTextfield() {
-    const textfieldElems = document.querySelectorAll('.tf')
-
-    for (let i = 0; i < textfieldElems.length; i++) {
-        const textfield = textfieldElems[i];
-        const input = textfield.querySelector('input, textarea')
-        const label = textfield.querySelector('label')
-
-        if (input.value != '') {
-            label.classList.add('_change-label')
-        }
-
-        input.addEventListener('focus', e => {
-            label.classList.add('_change-label')
+// Эффект наведения на ссылки в меню
+if (window.innerWidth > 768) {
+    const menuLinkElems = document.querySelectorAll('.menu__link')
+    let timeout
+    
+    for (let i = 0; i < menuLinkElems.length; i++) {
+        const menuLink = menuLinkElems[i];
+        
+        menuLink.addEventListener('mouseenter', e => {
+            const menuLinkActive = document.querySelector('.menu__link._active')
+            
+            clearTimeout(timeout)
+            menuLinkActive.classList.add('_hide-hover')
         })
         
-        input.addEventListener('blur', e => {
-            if (input.value === '') {
-                label.classList.remove('_change-label')
+        menuLink.addEventListener('mouseleave', e => {
+            const menuLinkActive = document.querySelector('.menu__link._active')
+    
+            if (!menuLink.classList.contains('_active')) {
+                timeout = setTimeout(e => {
+                    menuLinkActive.classList.remove('_hide-hover')
+                }, 300)
+            }
+            else {
+                menuLinkActive.classList.remove('_hide-hover')
             }
         })
     }
 }
 
-window.addEventListener('click', e => {
-    const target = e.target
+// Плейсхолдер текстовых полей
+// labelTextfield()
+// function labelTextfield() {
+//     const textfieldElems = document.querySelectorAll('.tf')
 
-    if (target.nodeName == 'INPUT') {
-        textfieldRemoveError(target.closest('.tf'))
-    }
-})
+//     for (let i = 0; i < textfieldElems.length; i++) {
+//         const textfield = textfieldElems[i];
+//         const input = textfield.querySelector('input, textarea')
+//         const label = textfield.querySelector('label')
 
-const formSignIn = document.querySelector('#form-sign-in')
-const signInInputElems = formSignIn.querySelectorAll('.tf input[data-tf-required]')
+//         if (input.value != '') {
+//             label.classList.add('_change-label')
+//         }
 
-formSignIn.addEventListener('submit', async e => {
-    let validForm = true
-    e.preventDefault()
-    
-    // Проверка на пустоту
-    signInInputElems.forEach(input => {
-        if (textfieldEmpty(input)) {
-            validForm = false
-        }
-    })
-    
-    if (validForm === false) {
-        console.log('Форма не до конца заполнена!')
-        return
-    }
-
-    const formData = new FormData(formSignIn)
-    const formAction = formSignIn.getAttribute('action')
-
-    const response = await fetch(formAction, {
-        method: 'POST',
-        body: formData,
-    })
-
-    if (response.ok) {
-        resetForm(formSignIn)
-    }
-    else {
-
-        setTimeout(e => {
-
-            console.error("Ошибка HTTP: " + response.status)
-        }, 2000)
-    }
-})
-
-function resetForm(form) {
-    form.reset()
-
-    const tfElems = form.querySelectorAll('.tf')
-
-    for (let i = 0; i < tfElems.length; i++) {
-        const tf = tfElems[i]
-        const tfLabel = tf.querySelector('label')
+//         input.addEventListener('focus', e => {
+//             label.classList.add('_change-label')
+//         })
         
-        tfLabel.classList.remove('_change-label')
-    }
-}
+//         input.addEventListener('blur', e => {
+//             if (input.value === '') {
+//                 label.classList.remove('_change-label')
+//             }
+//         })
+//     }
+// }
 
-// Если пустое поле...
-function textfieldEmpty(textfield) {
-    if (textfield.value.trim() == '') {
-        textfieldAddError(textfield.closest('.tf'), 'Поле не должно быть пустым')
-        return true
-    }
-}
+// window.addEventListener('click', e => {
+//     const target = e.target
 
-// Добавить ошибку
-function textfieldAddError(textfield, errorText) {
-    textfield.dataset.textfieldError = errorText
-    textfield.classList.add('_textfield-error')
-}
+//     if (target.nodeName == 'INPUT') {
+//         textfieldRemoveError(target.closest('.tf'))
+//     }
+// })
 
-// Удалить ошибку
-function textfieldRemoveError(textfield) {
-    textfield.removeAttribute('data-textfield-error')
-    textfield.classList.remove('_textfield-error')
-}
+// const formSignIn = document.querySelector('#form-sign-in')
+// const signInInputElems = formSignIn.querySelectorAll('.tf input[data-tf-required]')
+
+// formSignIn.addEventListener('submit', async e => {
+//     let validForm = true
+//     e.preventDefault()
+    
+//     // Проверка на пустоту
+//     signInInputElems.forEach(input => {
+//         if (textfieldEmpty(input)) {
+//             validForm = false
+//         }
+//     })
+    
+//     if (validForm === false) {
+//         console.log('Форма не до конца заполнена!')
+//         return
+//     }
+
+//     const formData = new FormData(formSignIn)
+//     const formAction = formSignIn.getAttribute('action')
+
+//     const response = await fetch(formAction, {
+//         method: 'POST',
+//         body: formData,
+//     })
+
+//     if (response.ok) {
+//         resetForm(formSignIn)
+//     }
+//     else {
+
+//         setTimeout(e => {
+
+//             console.error("Ошибка HTTP: " + response.status)
+//         }, 2000)
+//     }
+// })
+
+// function resetForm(form) {
+//     form.reset()
+
+//     const tfElems = form.querySelectorAll('.tf')
+
+//     for (let i = 0; i < tfElems.length; i++) {
+//         const tf = tfElems[i]
+//         const tfLabel = tf.querySelector('label')
+        
+//         tfLabel.classList.remove('_change-label')
+//     }
+// }
+
+// // Если пустое поле...
+// function textfieldEmpty(textfield) {
+//     if (textfield.value.trim() == '') {
+//         textfieldAddError(textfield.closest('.tf'), 'Поле не должно быть пустым')
+//         return true
+//     }
+// }
+
+// // Добавить ошибку
+// function textfieldAddError(textfield, errorText) {
+//     textfield.dataset.textfieldError = errorText
+//     textfield.classList.add('_textfield-error')
+// }
+
+// // Удалить ошибку
+// function textfieldRemoveError(textfield) {
+//     textfield.removeAttribute('data-textfield-error')
+//     textfield.classList.remove('_textfield-error')
+// }

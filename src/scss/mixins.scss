@@ -23,6 +23,17 @@
     }
 }
 
+// Адаптивный размер
+@function adsize($minSize, $maxSize, $minScreen, $maxScreen) {
+    @return calc( (100vw - #{$minScreen}px)/(#{$maxScreen} - #{$minScreen}) * (#{$maxSize} - #{$minSize}) + #{$minSize}px)
+}
+
+@mixin res-size($property, $minSize, $maxSize, $minScreen, $maxScreen) {
+    @media (min-width: #{$minScreen}px) and (max-width: #{$maxScreen}px) {
+        #{$property}: calc( (100vw - #{$minScreen}px)/(#{$maxScreen} - #{$minScreen}) * (#{$maxSize} - #{$minSize}) + #{$minSize}px)
+    }
+} 
+
 // Стили выделения контента на сайте
 @mixin selection {
     $prefixes: ':' ':-moz-';

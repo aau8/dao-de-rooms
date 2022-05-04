@@ -1,1 +1,40 @@
-$hide-menu: $tablet;
+$hide-menu: 1023px;
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: $firm-color;
+    padding: 16px 0;
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 68px;
+    display: block;
+    margin: 0 24px;
+
+    @media (max-width: 1100px) {
+        margin: 0 16px;
+    }
+
+    @media (max-width: $hide-menu) {
+        height: 55px;
+        margin: 0;
+    }
+}
+
+.header__logo {
+    display: none;
+
+    @media (max-width: $hide-menu) {
+        display: block;
+    }
+}

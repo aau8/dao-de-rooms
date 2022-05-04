@@ -1,0 +1,38 @@
+.section {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.section_pt-b {
+    padding: 124px 0;
+}
+
+.section_theme-dark {
+    background-color: $firm-color;
+    color: $text-light;
+}
+
+// Шапка секции
+.s-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.s-header__content {
+    text-align: center;
+}
+
+.s-header__title {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.s-header__text {
+    max-width: 1000px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 44px;
+}
