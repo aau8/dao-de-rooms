@@ -18,10 +18,13 @@
     @media (max-width: $laptop) {
         grid-template-columns: repeat(2, 1fr);
         gap: 120px 26px;
+        margin-top: 80px;
     }
 
     @media (max-width: 670px) {
         grid-template-columns: 1fr;
+        gap: 80px 16px;
+        margin-top: 40px;
     }
 }
 

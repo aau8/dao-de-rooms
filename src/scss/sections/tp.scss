@@ -1,0 +1,213 @@
+// tp - travel passion
+.tp__wrap {
+    position: relative;
+}
+
+.tp__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(400px, min-content) minmax(485px, min-content);
+    gap: 70px 40px;
+
+    @media (max-width: 1300px) {
+        grid-template-rows: minmax(300px, min-content) minmax(300px, min-content);
+    }
+
+    @media (max-width: $laptop) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: minmax(400px, min-content);
+        gap: 50px 30px;
+    }
+
+    @media (max-width: 670px) {
+        grid-template-columns: 1fr;
+        gap: 40px 30px;
+    }
+
+    @media (max-width: $mobile-l) {
+        grid-auto-rows: minmax(250px, min-content);
+        gap: 20px;
+    }
+}
+
+.tp__block {
+    width: 100%;
+    height: 100%;
+
+    & img {
+        object-fit: cover;
+    }
+}
+
+// Блок с манифестом
+.tp-manif {
+    display: flex;
+    flex-direction: column;
+}
+
+.tp-manif__content {
+    flex: 1 0 auto;
+    margin-bottom: 24px;
+}
+
+.tp-manif__title {
+    color: $firm-color;
+
+    @include res-size(font-size, 24, 50, 1024, 1700);
+    @include res-size(font-size, 24, 45, 670, 1024);
+    @include res-size-mw(font-size, 24, 45, 320, 670);
+}
+
+.tp-manif__text {
+    margin-top: 14px;
+
+    @include res-size(font-size, 14, 16, 1024, 1700);
+    @include res-size(font-size, 14, 16, 670, 1024);
+    @include res-size-mw(font-size, 14, 16, 320, 670);
+}
+
+.tp-manif__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tp-manif__link-text {
+    font-size: 36px;
+    color: $firm-color;
+
+    @include res-size(font-size, 20, 36, 1024, 1700);
+    @include res-size(font-size, 20, 32, 670, 1024);
+    @include res-size-mw(font-size, 18, 32, 320, 670);
+}
+
+.tp-manif__link-icon {
+    height: 29px;
+
+    @include res-size(height, 22, 29, 1024, 1700);
+    @include res-size(height, 22, 29, 670, 1024);
+    @include res-size-mw(height, 20, 29, 320, 670);
+}
+
+// Блок с одной картинкой
+.tp-img {
+    position: relative;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Блок с двумя картинками в строку
+.tp-img-r {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 33px;
+
+    @include res-size(row-gap, 20, 33, 1024, 1700);
+    
+    @media (max-width: 1024px) {
+        row-gap: 20px;
+    }
+}
+
+.tp-img-r__img {
+    position: relative;
+    width: 100%;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Блок с двумя картинками в колонку
+.tp-img-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 40px;
+
+    @include res-size(column-gap, 20, 40, 1024, 1700);
+    
+    @media (max-width: 1024px) {
+        column-gap: 20px;
+    }
+}
+
+.tp-img-c__img {
+    position: relative;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Блок с галлереей
+.tp-gallery {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $firm-color;
+    padding: 33px 28px;
+}
+
+.tp-gallery__content {
+    flex: 1 0 auto;
+    margin-bottom: 16px;
+}
+
+.tp-gallery__title {
+    font-size: 36px;
+    color: $firm-color;
+    line-height: 1.2;
+
+    @include res-size(font-size, 20, 36, 1024, 1700);
+    @include res-size(font-size, 20, 36, 670, 1024);
+    @include res-size-mw(font-size, 20, 36, 320, 670);
+}
+
+.tp-gallery__text {
+    margin-top: 21px;
+
+    @include res-size(font-size, 14, 16, 1024, 1700);
+    @include res-size(font-size, 14, 16, 670, 1024);
+    @include res-size-mw(font-size, 14, 16, 320, 670);
+
+    @media (max-width: $mobile-l) {
+        margin-top: 12px;
+    }
+}
+
+.tp-gallery__arrow {
+    width: fit-content;
+    height: 29px;
+    margin-left: auto;
+
+    @include res-size(height, 22, 29, 1024, 1700);
+    @include res-size(height, 22, 29, 670, 1024);
+    @include res-size-mw(height, 22, 29, 320, 670);
+}
+
+// Каракуля
+.tp__scribble {
+    position: absolute;
+    z-index: -1;
+    top: -5%;
+    left: 50%;
+    transform: translate(30%, 0);
+    width: 766px;
+    height: 283px;
+}

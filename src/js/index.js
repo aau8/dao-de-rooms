@@ -2,6 +2,7 @@ import { find, findAll, removeAll, bodyLock } from "./utilities/functions.js";
 import "./render.js";
 // import "./menu.js";
 import "./modals.js";
+import "./sliders.js";
 
 // Меню
 window.addEventListener('resize', menu)
@@ -40,6 +41,66 @@ function menu() {
             bodyLock()
         });
     }
+}
+
+// Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom
+zoomInImg()
+function zoomInImg() {
+    const TR = 300
+    const zoomInImgElems = document.querySelectorAll("[data-zoom]")
+
+    for (let i = 0; i < zoomInImgElems.length; i++) {
+        const zoomInImg = zoomInImgElems[i]
+        
+        zoomInImg.style.cursor = "zoom-in"
+    }
+
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        if (target.getAttribute('data-zoom') != null) {
+            const imgSrc = target.getAttribute("src")
+            const bigImg = document.createElement("div")
+        
+            bigImg.classList.add("big-img")
+            bigImg.style.cursor = "zoom-out"
+            bigImg.style.setProperty('--zoom-img-transition', TR + 'ms')
+        
+            bigImg.innerHTML = `<div class="big-img__body"><img src="${imgSrc}" alt="" data-zoom-out></div>`
+        
+            document.querySelector(".wrapper").append(bigImg)
+        
+            setTimeout(() => {
+                bigImg.classList.add("_show")
+            }, 1)
+        
+            document.body.classList.add("_lock")
+        }
+
+        if (target.getAttribute('data-zoom-out') != null) {
+            const bigImg = target.closest('.big-img')
+
+            bigImg.classList.remove("_show")
+            document.body.classList.remove("_lock")
+
+            setTimeout(() => {
+                bigImg.remove()
+            }, TR)
+        }
+    })
+
+    // Закрыть увеличенное изображение
+    const zoomOutImgElems = document.querySelectorAll("[data-zoom-out]")
+    
+    zoomOutImgElems.forEach((zoomOutImg) => {
+        zoomOutImg.addEventListener("click", () => {
+        })
+    })
+    // zoomInImgElems.forEach((zoomInImg) => {
+
+    //     zoomInImg.addEventListener("click", () => {
+    //     })
+    // })
 }
 
 // Стрелка "Наверх"

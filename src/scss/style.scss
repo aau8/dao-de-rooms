@@ -32,20 +32,30 @@ body {
         flex: 1 0 auto;
         position: relative;
         z-index: 1;
-        display: flex;
+        // display: flex;
     }
 }
 
 @import "grid"; // Сетка
+
+// Библиотеки
+@import "libs/swiper";
 
 // Элементы
 @import "./elements/buttons";
 // @import "./elements/textfield";
 
 // Компоненты
+@import "./components/zoom-in-img";
 @import "./components/modals/modal";
 @import "./components/section";
+
+// Карточки
 @import "./components/cards/room";
+@import "./components/cards/sr-card";
+@import "./components/cards/ss-card";
+@import "./components/cards/se-card";
+@import "./components/cards/si-card";
 
 // Текстовые компоненты
 @import "./components/text";
@@ -55,4 +65,9 @@ body {
 @import "./sections/menu";
 @import "./sections/main";
 @import "./sections/s-history";
+@import "./sections/tp";
+@import "./sections/s-reviews";
+@import "./sections/s-services";
+@import "./sections/s-events";
+@import "./sections/s-insta";
 @import "./sections/footer";

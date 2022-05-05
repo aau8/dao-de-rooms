@@ -29,6 +29,10 @@ $hide-menu: 1023px;
         height: 55px;
         margin: 0;
     }
+
+    @media (max-width: $mobile-l) {
+        height: 45px;
+    }
 }
 
 .header__logo {

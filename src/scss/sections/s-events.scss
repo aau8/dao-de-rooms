@@ -1,0 +1,20 @@
+.s-events__body {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(656px, min-content) minmax(418px, min-content) minmax(418px, min-content);
+    gap: 46px 41px;
+
+    @media (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-auto-rows: minmax(418px, min-content);
+        gap: 20px;
+    }
+
+    @media (max-width: 670px) {
+        grid-template-columns: 1fr;
+    }
+}

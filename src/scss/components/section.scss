@@ -1,6 +1,14 @@
 .section {
     width: 100%;
     padding: 100px 0;
+
+    @media (max-width: $tablet) {
+        padding: 80px 0;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 60px 0;
+    }
 }
 
 .section_pt-b {
@@ -25,14 +33,20 @@
 }
 
 .s-header__title {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1;
 }
 
 .s-header__text {
-    max-width: 1000px;
+    max-width: 1060px;
     width: 100%;
     font-size: 16px;
     margin-top: 44px;
+
+    @media (max-width: $tablet) {
+        margin-top: 32px;
+    }
+    
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+        margin-top: 18px;
+    }
 }

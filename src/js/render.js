@@ -30,6 +30,19 @@ if (window.innerWidth > 768) {
     }
 }
 
+// Отступы у контента карточек в разделе Мероприятия, чтобы заголовок всегда полностью помещался
+if (window.innerWidth > 670) {
+    const cardElems = document.querySelectorAll('.se-card')
+    
+    for (let i = 0; i < cardElems.length; i++) {
+        const card = cardElems[i];
+        const content = card.querySelector('.se-card__content')
+        const title = content.querySelector('.se-card__title')
+    
+        content.style.transform = `translateY(calc(100% - ${title.clientHeight}px   ))`
+    }
+}
+
 // Плейсхолдер текстовых полей
 // labelTextfield()
 // function labelTextfield() {

@@ -1,22 +1,13 @@
-.square-brackets {
+.title-section {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.1;
 
-    &::before {
-        content: '[';
-        color: inherit;
-        margin-right: 4px;
-
-        @media (max-width: 350px) {
-            margin-right: 2px;
-        }
+    @media (max-width: $tablet) {
+        font-size: 40px;
     }
 
-    &::after {
-        content: ']';
-        color: inherit;
-        margin-left: 4px;
-
-        @media (max-width: 350px) {
-            margin-left: 2px;
-        }
+    @media (max-width: $mobile-l) {
+        font-size: 32px;
     }
 }
