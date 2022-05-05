@@ -1,0 +1,225 @@
+.s-contacts {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    
+    @media (max-width: $laptop) {
+        margin-top: 0;
+    }
+}
+
+.s-contacts__wrap {
+    width: 100%;
+    display: flex;
+}
+
+.s-contacts__img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.s-contacts__body {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 70px 60px 70px 117px;
+
+    @media (max-width: $laptop) {
+        padding: 100px 50px;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        padding: 80px 24px;
+    }
+    
+    @media (max-width: $mobile-l) {
+        padding: 50px 20px;
+    }
+}
+
+.s-contacts__title {
+    font-size: 36px;
+    font-weight: 400;
+
+    @media (max-width: $laptop) {
+        font-size: 30px;
+    }
+}
+
+// Наши контакты
+.sc-us {
+    border-bottom: 1px solid $text-light-second;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+
+    @media (max-width: $mobile-l) {
+        border: none;
+        padding-bottom: 0;
+    }
+}
+
+.sc-us__list {
+    margin-top: 16px;
+
+    @media (max-width: $laptop) {
+        margin-top: 24px;
+    }
+
+    & li {
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        & a {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #fff;
+                opacity: 1;
+                transition: $tr;
+            }
+
+            &:hover {
+                
+                @media (min-width: $min-hover) {
+                    
+                    &::before {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sc-us__insta {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            
+            & .sc-us__insta-text {
+
+                &::before {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.sc-us__insta-icon {
+    width: 20px;
+    display: flex;
+}
+
+.sc-us__insta-text {
+    position: relative;
+    margin-left: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $text-light;
+        opacity: 1;
+        transition: $tr;
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.sc-us__callback {
+    margin-top: 40px;
+}
+
+// Изображение между блоками
+.sc-img {
+    display: none;
+    margin-bottom: 50px;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+
+    & img {
+        object-fit: cover;
+    }
+}
+
+// Возник вопрос?
+.sc-quest {
+    max-width: 315px;
+    width: 100%;
+
+    @media (max-width: $mobile-l) {
+        max-width: none;
+    }
+}
+
+.sc-quest__tf-list {
+    margin-top: 16px;
+
+    & > .tf {
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+
+            @media (max-width: $laptop) {
+                margin-bottom: 12px;
+            }
+
+            @media (max-width: $mobile-l) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+.sc-quest__submit {
+    margin-top: 30px;
+}

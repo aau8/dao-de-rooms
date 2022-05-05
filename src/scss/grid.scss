@@ -1,7 +1,7 @@
 // ================ Container Start ================
 $container: 1608px;
 $container-gap: 24px;
-$container-gap-mobile: 16px;
+$container-gap-mobile: 20px;
 // ================ Container End ================
 
 @function mwContainer($cw) {
@@ -20,3 +20,7 @@ $container-gap-mobile: 16px;
         padding-right: $container-gap-mobile;
     }
 }
+
+// .container_footer {
+//     max-width: ;
+// }

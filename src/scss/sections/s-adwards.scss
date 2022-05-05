@@ -1,0 +1,39 @@
+.s-adwards {
+    position: relative;
+}
+
+.s-adwards__body {
+    margin-top: 100px;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 50px;
+    }
+}
+
+.s-adwards__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.s-adwards__scribble {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%) rotate(-30deg);
+    width: 766px;
+    height: 283px;
+
+    @media (max-width: $laptop) {
+        width: 585px;
+        height: 216px;
+    }
+
+    @media (max-width: $mobile-l) {
+        top: 40%;
+        transform: translate(-50%, -30%) rotate(170deg);
+        width: 358px;
+        height: 132px;
+    }
+}

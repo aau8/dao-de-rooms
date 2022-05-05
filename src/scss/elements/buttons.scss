@@ -1,65 +1,26 @@
 // Основной шаблон кнопки
 .btn {
     position: relative;
+    height: 52px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 20px;
+    border-radius: 5px;
     transition: $tr;
 
     @media (max-width: $mobile-m) {
         width: 168px;
     }
-
-    &:hover {
-        
-        @media (min-width: $min-hover) {
-            transform: scale(1.05);
-
-            & .btn__text {
-                letter-spacing: .1em;
-            }
-        }
-    }
-
-    &:active {
-        @media (min-width: $min-hover) {
-            transform: scale(1);
-
-            & .btn__text {
-                letter-spacing: .05em;
-            }
-        }
-        
-        transform: scale(0.95);
-
-        & .btn__text {
-            letter-spacing: .03em;
-
-        }
-    }
 }
 
-.btn__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.btn_light {
+    background: #fff;
+    color: $firm-color;
 }
 
-.btn__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    text-transform: uppercase;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
-    letter-spacing: 0.1em;
-    user-select: none;
-    transition: $tr;
-    white-space: nowrap;
-
-    @media (min-width: $min-hover) {
-        letter-spacing: 0.05em;
-    }
+.btn_accent {
+    background: $firm-color;
+    color: #fff;
 }
 
 .link-menu {

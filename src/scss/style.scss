@@ -40,10 +40,12 @@ body {
 
 // Библиотеки
 @import "libs/swiper";
+@import "libs/airdatapicker";
 
 // Элементы
 @import "./elements/buttons";
-// @import "./elements/textfield";
+@import "./elements/textfield";
+@import "./elements/select";
 
 // Компоненты
 @import "./components/zoom-in-img";
@@ -56,6 +58,7 @@ body {
 @import "./components/cards/ss-card";
 @import "./components/cards/se-card";
 @import "./components/cards/si-card";
+@import "./components/cards/sa-card";
 
 // Текстовые компоненты
 @import "./components/text";
@@ -70,4 +73,7 @@ body {
 @import "./sections/s-services";
 @import "./sections/s-events";
 @import "./sections/s-insta";
+@import "./sections/s-adwards";
+@import "./sections/s-contacts";
+@import "./sections/s-location";
 @import "./sections/footer";

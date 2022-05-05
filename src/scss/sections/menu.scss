@@ -5,11 +5,12 @@
     @media (max-width: $hide-menu) {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         height: 100vh;
         display: flex;
-        justify-content: center;
-        background: $firm-color;
+        justify-content: flex-end;
+        // background: $firm-color;
+        background: rgba(0,0,0,.8);
         overflow-y: auto;
         overflow-x: hidden;
         transform: translateX(100%);
@@ -22,12 +23,15 @@
 }
 
 .menu__wrap {
+    width: 60%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: $firm-color;
 
     @media (max-width: $hide-menu) {
-        width: 100%;
+        // width: 100%;
         flex-direction: column;
         justify-content: center;
         padding: 48px 0;
@@ -179,145 +183,166 @@
     & span {
         position: absolute;
         top: 50%;
-        left: 50%;
+        right: 0;
+        // left: 50%;
         width: 80%;
         height: 2px;
         background: #fff;
         transition: $tr;
 
         &:nth-child(1) {
-            width: 50%;
-            transform: translate(-50%, calc(-50% - 8px));
+            width: 100%;
+            transform: translate(0, calc(-50% - 8px));
         }
 
         &:nth-child(2) {
-            transform: translate(-50%, -50%);
+            width: 80%;
+            transform: translate(0, -50%);
         }
 
         &:nth-child(3) {
-            width: 50%;
-            transform: translate(-50%, calc(-50% + 8px));
+            width: 60%;
+            transform: translate(0, calc(-50% + 8px));
         }
     }
 
-    &._activeAnim {
+    // &._activeAnim {
 
-        & span {
+    //     & span {
 
-            &:nth-child(1) {
-                animation: activeSpan1 .3s linear forwards;
-            }
+    //         &:nth-child(1) {
+    //             animation: activeSpan1 .3s linear forwards;
+    //         }
 
-            &:nth-child(2) {
-                animation: activeSpan2 .3s linear forwards;
-            }
+    //         &:nth-child(2) {
+    //             animation: activeSpan2 .3s linear forwards;
+    //         }
 
-            &:nth-child(3) {
-                animation: activeSpan3 .3s linear forwards;
-            }
-        }
-    }
+    //         &:nth-child(3) {
+    //             animation: activeSpan3 .3s linear forwards;
+    //         }
+    //     }
+    // }
 
     &._active {
 
         & span {
 
             &:nth-child(1) {
-                width: 80%;
-                transform: translate(-50%, -50%) rotate(-45deg);
+                width: 100%;
+                right: 50%;
+                transform: translate(50%, -50%) rotate(45deg);
             }
 
             &:nth-child(2) {
-                opacity: 0;
+                width: 0;
             }
 
             &:nth-child(3) {
-                width: 80%;
-                transform: translate(-50%, -50%) rotate(45deg);
+                width: 100%;
+                right: 50%;
+                transform: translate(50%, -50%) rotate(-45deg);
             }
         }
 
-        &._deactiveAnim {
+        // & span {
 
-            & span {
+        //     &:nth-child(1) {
+        //         width: 80%;
+        //         transform: translate(-50%, -50%) rotate(-45deg);
+        //     }
 
-                &:nth-child(1) {
-                    animation: activeSpan1 .3s linear forwards reverse;
-                }
+        //     &:nth-child(2) {
+        //         opacity: 0;
+        //     }
 
-                &:nth-child(2) {
-                    animation: activeSpan2 .3s linear forwards reverse;                    
-                }
+        //     &:nth-child(3) {
+        //         width: 80%;
+        //         transform: translate(-50%, -50%) rotate(45deg);
+        //     }
+        // }
 
-                &:nth-child(3) {
-                    animation: activeSpan3 .3s linear forwards reverse;
-                }
-            }
-        }
+        // &._deactiveAnim {
+
+        //     & span {
+
+        //         &:nth-child(1) {
+        //             animation: activeSpan1 .3s linear forwards reverse;
+        //         }
+
+        //         &:nth-child(2) {
+        //             animation: activeSpan2 .3s linear forwards reverse;                    
+        //         }
+
+        //         &:nth-child(3) {
+        //             animation: activeSpan3 .3s linear forwards reverse;
+        //         }
+        //     }
+        // }
     }
 
-    @keyframes activeSpan1 {
-        0% {
-            transform: translate(-50%, calc(-50% - 6px));
-            width: 50%;
-        }
-        20% {
-            transform: translate(-50%, -50%);
-            width: 50%;
-        }
-        50% {
-            transform: translate(-50%, -50%) rotate(0);
-            width: 1px;
-        }
-        51% {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-        100% {
-            width: 80%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-    }
+    // @keyframes activeSpan1 {
+    //     0% {
+    //         transform: translate(-50%, calc(-50% - 6px));
+    //         width: 50%;
+    //     }
+    //     20% {
+    //         transform: translate(-50%, -50%);
+    //         width: 50%;
+    //     }
+    //     50% {
+    //         transform: translate(-50%, -50%) rotate(0);
+    //         width: 1px;
+    //     }
+    //     51% {
+    //         transform: translate(-50%, -50%) rotate(-45deg);
+    //     }
+    //     100% {
+    //         width: 80%;
+    //         transform: translate(-50%, -50%) rotate(-45deg);
+    //     }
+    // }
 
-    @keyframes activeSpan2 {
-        0% {
-            opacity: 1;
-            transform: translate(-50%, -50%);
-        }
-        20% {
-            transform: translate(-50%, -50%);
-            width: 80%;
-        }
-        50% {
-            width: 1px;
-            opacity: 1;
-        }
-        51% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
+    // @keyframes activeSpan2 {
+    //     0% {
+    //         opacity: 1;
+    //         transform: translate(-50%, -50%);
+    //     }
+    //     20% {
+    //         transform: translate(-50%, -50%);
+    //         width: 80%;
+    //     }
+    //     50% {
+    //         width: 1px;
+    //         opacity: 1;
+    //     }
+    //     51% {
+    //         opacity: 0;
+    //     }
+    //     100% {
+    //         opacity: 0;
+    //     }
+    // }
 
-    @keyframes activeSpan3 {
-        0% {
-            transform: translate(-50%, calc(-50% + 6px));
-            width: 50%;
-        }
-        20% {
-            transform: translate(-50%, -50%);
-            width: 50%;
-        }
-        50% {
-            transform: translate(-50%, -50%) rotate(0);
-            width: 1px;
-        }
-        51% {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-        100% {
-            width: 80%;
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-    }
+    // @keyframes activeSpan3 {
+    //     0% {
+    //         transform: translate(-50%, calc(-50% + 6px));
+    //         width: 50%;
+    //     }
+    //     20% {
+    //         transform: translate(-50%, -50%);
+    //         width: 50%;
+    //     }
+    //     50% {
+    //         transform: translate(-50%, -50%) rotate(0);
+    //         width: 1px;
+    //     }
+    //     51% {
+    //         transform: translate(-50%, -50%) rotate(45deg);
+    //     }
+    //     100% {
+    //         width: 80%;
+    //         transform: translate(-50%, -50%) rotate(45deg);
+    //     }
+    // }
 }
