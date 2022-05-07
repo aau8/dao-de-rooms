@@ -271,7 +271,12 @@
 
 // Пагинация на мобиле
 .s-aparts__titles {
+    display: none;
     margin-top: 30px;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
 }
 
 .swiper-wrapper {

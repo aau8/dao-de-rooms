@@ -2362,7 +2362,6 @@ body._lock {
 .burger {
   display: none;
   position: relative;
-  width: 32px;
   height: 32px;
 }
 
@@ -2436,6 +2435,8 @@ body._lock {
   position: absolute;
   top: 20px;
   right: 20px;
+  width: 32px;
+  height: 32px;
 }
 
 .main {
@@ -3078,6 +3079,7 @@ body._lock {
 }
 
 .s-aparts__titles {
+  display: none;
   margin-top: 30px;
 }
 
@@ -3825,7 +3827,7 @@ body._lock {
   }
 
   .s-insta__link {
-    margin-top: 5px;
+    margin-top: 30px;
   }
 
   .s-insta__link-text {
@@ -4062,6 +4064,10 @@ body._lock {
   }
 
   .burger {
+    height: 28px;
+  }
+
+  .burger_close {
     width: 28px;
     height: 28px;
   }
@@ -4150,6 +4156,10 @@ body._lock {
     display: -ms-flexbox;
     display: flex;
     margin: 30px auto 0 auto;
+  }
+
+  .s-aparts__titles {
+    display: block;
   }
 
   .s-contacts__img {

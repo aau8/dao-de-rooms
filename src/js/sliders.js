@@ -67,19 +67,21 @@ const sApartsContent = new Swiper(sApartsContentElem, {
     }
 })
 
-const sApartsTitlesMobile = new Swiper('.s-aparts__titles', {
-    modules: [EffectFade, Navigation, Thumbs],
-
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    slideToClickedSlide: true,
-
-    navigation: {
-        prevEl: '.sap__arrows_mobile .sap__arrow_prev',
-        nextEl: '.sap__arrows_mobile .sap__arrow_next',
-    },
+if (window.innerWidth < 768) {
+    const sApartsTitlesMobile = new Swiper('.s-aparts__titles', {
+        modules: [EffectFade, Navigation, Thumbs],
     
-    thumbs: {
-        swiper: sApartsContent
-    }
-})
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        slideToClickedSlide: true,
+    
+        navigation: {
+            prevEl: '.sap__arrows_mobile .sap__arrow_prev',
+            nextEl: '.sap__arrows_mobile .sap__arrow_next',
+        },
+        
+        thumbs: {
+            swiper: sApartsContent
+        }
+    })
+}
