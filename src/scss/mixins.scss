@@ -9,15 +9,15 @@
 }
 
 @function lhperc($font-size, $line-height-px) {
-    @return round($line-height-px / $font-size * 10) / 10;
+    @return calc(round(calc($line-height-px / $font-size) * 10) / 10);
 }
-
+ 
 // Стиль скроллбара
 @mixin scrollbar($width: 16px, $thumb: #cecece, $track: transparent) {
     body::-webkit-scrollbar {
         width: $width;
     }
-    
+     
     body::-webkit-scrollbar-track {
         background: $track;
     }

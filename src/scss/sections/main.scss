@@ -17,7 +17,12 @@
     }
 
     @media (max-width: $tablet) {
-        min-height: 600px;
+        // min-height: 600px;
+    }
+
+    @media (max-width: 1000px) {
+        justify-content: initial;
+        padding: 277px 0 100px 0;
     }
 }
 
@@ -47,6 +52,21 @@
 .main__row {
     width: 100%;
     height: 140px;
+
+    @media (max-width: $laptop) {
+        height: 116px;
+    }
+
+    @media (max-width: 1000px) {
+        height: auto;
+    }
+}
+
+.main__row-empty {
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }
 
 .main__content {
@@ -55,6 +75,10 @@
     align-items: center;
     color: #fff;
     text-align: center;
+
+    @media (max-width: 1000px) {
+        margin-bottom: 95px;
+    }
 }
 
 .main__title {
@@ -100,18 +124,19 @@
     }
 
     @media (max-width: 500px) {
-        font-size: 18px;
+        // font-size: 18px;
     }
 
     @media (max-width: $mobile-l) {
-        font-size: 16px;
+        font-weight: 300;
+        // font-size: 16px;
     }
 }
 
 // Виджет бронирования
 .w-book {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     max-width: 1334px;
     width: 100%;
     height: 100%;
@@ -122,7 +147,208 @@
     padding: 0 98px;
     margin: 0 auto;
 
-    & > * {
-        flex: 1 1 0
+    @media (max-width: 1220px) {
+        padding: 0 26px;
+    }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        padding: 30px 24px;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 30px 20px;
+    }
+
+    @media (max-width: $mobile-m) {
+        padding: 24px 12px;
+    }
+}
+
+.w-book__field-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: -30px;
+    
+    & > .w-book__field {
+
+        @media (max-width: 1000px) {
+            flex: 1 1 0;
+        }
+
+        @media (max-width: 700px) {
+            flex: inherit;
+            width: 100%;
+            
+            &:not(:last-child) {
+                // border-bottom: 1px solid $text-light-second;
+                // margin-bottom: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        margin-left: 0;
+    }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.w-book__field {
+    // margin: 0 30px;
+    margin: 0 15px;
+    padding: 0 15px;
+
+    @media (max-width: $laptop) {
+        padding: 0 5px;
+    }
+
+    @media (max-width: 700px) {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.w-book__separator {
+    width: 1px;
+    height: 60px;
+    background: $text-light-second;
+    margin: 0 5px;
+
+    &-last {
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 1px;
+        margin: 5px 0;
+    }
+}
+
+.w-book__manag {
+    // width: 20%;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+
+    @media (max-width: 1000px) {
+        margin: 16px 0 0 0;
+    }
+}
+
+.w-book__tf {
+    position: relative;
+    height: 40px;
+}
+
+.w-book__tf-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: $laptop) {
+        left: 5px;
+    }
+
+    @media (max-width: 700px) {
+        left: 0;
+    }
+}
+
+.w-book__tf-input {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    background: none;
+    padding-left: 48px;
+    // overflow: hidden;
+    // resize: none;
+
+    @media (max-width: $laptop) {
+        padding-left: 38px;
+    }
+
+    @media (max-width: 700px) {
+        padding-left: 48px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+    }
+}
+
+.w-book__promocode {
+    // max-width: 220px;
+    // width: 100%;
+    width: 220px;
+    height: 56px;
+
+    @media (max-width: 1200px) {
+        width: 130px;
+    }
+
+    @media (max-width: $mobile-l) {
+        width: 113px;
+    }
+
+    @media (max-width: $mobile-m) {
+        width: 43%;
+    }
+
+    & .tf__field {
+        width: 100%;
+        height: 100%;
+
+        & label {
+            left: 50%;
+            font-size: 16px;
+            font-weight: 300;
+            color: $text-primary;
+            transform: translate(-50%, -50%);
+
+            &._change-label {
+                display: none;
+                transform: none;
+            }
+
+            @media (max-width: $mobile-m) {
+                font-size: 14px;
+            }
+        }
+
+        & input {
+            text-align: center;
+            border: 1px solid $text-light-second;
+            border-radius: 5px;
+            padding: 0 12px;
+
+            @media (max-width: $mobile-m) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.w-book__booking {
+    width: 187px;
+    margin-left: 16px;
+
+    @media (max-width: $mobile-m) {
+        max-width: 187px;
+        width: 57%;
+        padding: 0 14px;
+        margin-left: 12px;
     }
 }

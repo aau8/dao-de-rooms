@@ -1,8 +1,57 @@
 import { removeAll, isWebp } from "./utilities/functions.js"
 import AirDatepicker from "air-datepicker";
 
-new AirDatepicker('#date-search')
+/**
+ * TODO: Требует доработки
+ * Не нашел в api календаря события инициализации, чтобы после установки даты, вызывалась функция с рассчетом размера инпута
+ * Вариант решения MutationObserver
+ */
+let startDate = new Date();
+let endDate = new Date().setDate(startDate.getDate() + 1)
+const calendarSearchInput = document.getElementById('date-search')
 
+calendarSearchInput.addEventListener('keypress', e => e.preventDefault() )
+
+const calendarSearch = new AirDatepicker(calendarSearchInput, {
+    autoClose: true,
+    range: true,
+    multipleDatesSeparator: ' - ',
+    dateFormat: 'dd/MM/yyyy',
+    minDate: startDate,
+    selectedDates: [startDate, endDate],
+
+    onSelect: e => {
+        console.log(e)
+        setWidthInputSearchCalendar()
+    },
+
+    onRenderCell: e => {
+        console.log('onRenderCell', e)
+    },
+
+    onShow: e => {
+        console.log('onShow', e)
+    },
+
+    onHide: e => {
+        console.log('onHide', e)
+    },
+
+    onChangeView: e => {
+        console.log('onChangeView', e)
+    },
+})
+
+// setWidthInputSearchCalendar()
+function setWidthInputSearchCalendar() {
+    const value = calendarSearchInput.value
+    const domElem = document.createElement('div')
+
+    domElem.innerText = value
+
+    console.log(domElem, value)
+    console.log(domElem.clientWidth)
+}
 
 // Эффект наведения на ссылки в меню
 if (window.innerWidth > 768) {

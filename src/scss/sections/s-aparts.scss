@@ -1,0 +1,305 @@
+.s-aparts {
+
+    @media (max-width: $tablet) {
+        padding-bottom: 50px;
+    }
+}
+
+.s-aparts__wrap {
+    display: flex;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        // padding: 0 20px;
+    }
+}
+
+// Блок с картинками
+.s-aparts__gallery-container {
+    width: 50%;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.s-aparts__gallery {
+    width: 100%;
+    height: 100%;
+    background: #333;
+
+    @media (max-width: $tablet) {
+        position: relative;
+        // height: 500px;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 80%;
+        }
+
+        & .swiper-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.sag-slide {
+    position: relative;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Блок с основной информацией
+.s-aparts__info {
+    width: 50%;
+    padding: 50px 40px 140px 62px;
+
+    @media (max-width: $laptop) {
+        padding: 100px 30px 100px 50px;
+    }
+
+    @media (max-width: $laptop) {
+        padding: 80px 20px 80px 30px;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%;
+        padding: 50px 20px 30px 20px;
+    }
+}
+
+.s-aparts__header {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.s-aparts__body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 116px;
+
+    @media (max-width: $laptop) {
+        margin-top: 50px;
+    }
+
+    @media (max-width: $tablet) {
+        margin-top: 30px;
+    }
+}
+
+.sap__content {
+
+}
+
+.sap-slide {
+    transition: $tr;
+    
+    &.swiper-slide-active {
+
+        & .sap-slide__title {
+            animation: showInLeft .5s ease-in-out forwards;
+        }
+
+        & .sap-slide__text {
+            animation: showInLeft .5s .1s ease-in-out forwards;
+        }
+    }
+}
+
+.sap-slide__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.spa-slide__content {
+    max-width: 465px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sap-slide__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    opacity: 0;
+
+    @media (max-width: $tablet) {
+        font-size: 20px;
+    }
+}
+
+.sap-slide__text {
+    font-size: 16px;
+    margin-top: 20px;
+
+    @media (max-width: $tablet) {
+        margin-top: 10px;
+    }
+}
+
+.spa-slide__more {
+    display: flex;
+    align-items: center;
+    margin: 33px 0 0 auto;
+}
+
+.spa-slide__more-text {
+    font-size: 18px;
+}
+
+.spa-slide__more-icon {
+    max-width: 46px;
+    width: 100%;
+    height: 39px;
+    margin-left: 8px;
+}
+
+// Пагинация
+.sap__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    @media (max-width: $laptop) {
+        margin-top: 40px;
+    }
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.sap__apart-title {
+    font-size: 30px;
+    color: $text-primary;
+    opacity: .2;
+    transition: $tr;
+
+    @media (max-width: $laptop) {
+        font-size: 25px;
+    }
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 1px;
+        display: inline-block;
+        background: $text-primary;
+        vertical-align: middle;
+        transition: $tr;
+    }
+
+    &.swiper-pagination-bullet-active {
+        opacity: 1;
+
+        &::before {
+            width: 33px;
+            margin-right: 9px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 33px;
+
+        @media (max-width: $laptop) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            opacity: 1;
+        }
+    }
+}
+
+// Стрелки
+.sap__arrows {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    
+    @media (max-width: $laptop) {
+        margin-top: 50px;
+    }
+
+    &_pc {
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &_mobile {
+        display: none;
+
+        @media (max-width: $tablet) {
+            display: flex;
+            margin: 30px auto 0 auto;
+        }
+    }
+}
+
+.sap__arrow {
+    max-width: 135px;
+    width: 100%;
+}
+
+.sap__arrow_prev {
+
+}
+
+.sap__arrow_next {
+    margin-left: 30px;
+}
+
+// Пагинация на мобиле
+.s-aparts__titles {
+    margin-top: 30px;
+}
+
+.swiper-wrapper {
+
+}
+
+.swiper-slide {
+
+}
+
+.sat-slide {
+    width: 180px;
+    // width: fit-content;
+    display: flex;
+    justify-content: center;
+
+    &.swiper-slide-active {
+
+        & .sat-slide__btn {
+            opacity: 1;
+            color: $firm-color;
+        }
+    }
+}
+
+.sat-slide__btn {
+    font-size: 20px;
+    // color: $firm-color;
+    opacity: .2;
+    padding: 0 10px;
+}

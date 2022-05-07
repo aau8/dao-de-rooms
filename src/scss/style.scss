@@ -37,6 +37,7 @@ body {
 }
 
 @import "grid"; // Сетка
+@import "animation";
 
 // Библиотеки
 @import "libs/swiper";
@@ -70,6 +71,7 @@ body {
 @import "./sections/s-history";
 @import "./sections/tp";
 @import "./sections/s-reviews";
+@import "./sections/s-aparts";
 @import "./sections/s-services";
 @import "./sections/s-events";
 @import "./sections/s-insta";

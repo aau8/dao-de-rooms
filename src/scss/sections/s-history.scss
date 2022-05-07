@@ -46,6 +46,10 @@
         width: 100%;
         height: 100%;
     }
+
+    @media (max-width: $laptop) {
+        display: none;
+    }
 }
 
 .s-history__scribble-top {

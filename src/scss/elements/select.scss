@@ -45,22 +45,28 @@
     display: flex;
     align-items: center;
     // justify-content: space-between;
-    border-bottom: 2px solid #EEF1FF;
+    // border-bottom: 2px solid #EEF1FF;
     padding: 0;
     cursor: pointer;
 }
 
 .select-input__icon {
-    max-width: 30px;
-    width: 100%;
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    // width: 100%;
 }
 
 .select-input__title {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
     // color: $input-placeholder;
     pointer-events: none;
     margin-left: 18px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+    }
 }
 
 .select-input__chevron {

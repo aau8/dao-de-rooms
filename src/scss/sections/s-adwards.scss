@@ -26,6 +26,7 @@
     height: 283px;
 
     @media (max-width: $laptop) {
+        // display: none;
         width: 585px;
         height: 216px;
     }
