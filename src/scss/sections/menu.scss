@@ -181,7 +181,7 @@
 .menu__scribble {
     display: none;
 
-    @media (max-width: $laptop) {
+    @media (max-width: $hide-menu) {
         display: block;
         position: absolute;
         // z-index: -1;

@@ -42,3 +42,51 @@
         color: $link-active;
     }
 }
+
+.link {
+    transition: $tr;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            color: $firm-color;
+        }
+    }
+
+    &:active {
+        color: brig-color($firm-color, 30%);
+    }
+}
+
+// Кнопка "Отправить сообщение"
+.btn-message {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    background: $text-light;
+    border-radius: 0;
+    transition: 0s;
+
+    @media (max-width: 500px) {
+        right: 30px;
+        height: 45px;
+    }
+
+    @media (max-width: $mobile-l) {
+        right: 16px;
+    }
+}
+
+.btn-message__icon {
+    width: 26px;
+    height: 18px;
+}
+
+.btn-message__text {
+    margin-left: 14px;
+}

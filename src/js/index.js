@@ -3,11 +3,12 @@ import "./render.js";
 // import "./menu.js";
 import "./modals.js";
 import "./sliders.js";
+import "./tabs.js"
 
 // Меню
 window.addEventListener('resize', menu)
-
 menu()
+
 function menu() {
     if (window.innerWidth <= 1100) {
         const menu = document.querySelector('.menu')
@@ -80,6 +81,29 @@ function zoomInImg() {
     //     zoomInImg.addEventListener("click", () => {
     //     })
     // })
+}
+
+// Фиксация кнопки "Отправьте нам сообщение" над подвалом
+const footer = document.querySelector('.footer')
+const btnSendMessage = document.querySelector('.btn-message')
+
+window.addEventListener('scroll', fixBtnSendMessage)
+
+fixBtnSendMessage()
+function fixBtnSendMessage() {
+    const footerPageY = footer.getBoundingClientRect().top
+    
+    if (footerPageY - window.innerHeight < 0) {
+        if (!btnSendMessage.classList.contains('_fixed')) {
+            btnSendMessage.style.position = 'absolute'
+            btnSendMessage.style.bottom = document.body.scrollHeight - (footerPageY + window.scrollY) + 'px'
+            btnSendMessage.classList.add('_fixed')
+        }
+    }
+    else {
+        btnSendMessage.removeAttribute('style')
+        btnSendMessage.classList.remove('_fixed')
+    }
 }
 
 // Стрелка "Наверх"

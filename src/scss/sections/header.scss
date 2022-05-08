@@ -1,13 +1,16 @@
-$hide-menu: 1023px;
+$hide-menu: 1000px;
 
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 2;
     background: $firm-color;
     padding: 16px 0;
+    
+    &_main-page {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
 }
 
 .header__wrap {

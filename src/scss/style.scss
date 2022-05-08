@@ -32,7 +32,18 @@ body {
         flex: 1 0 auto;
         position: relative;
         z-index: 1;
-        // display: flex;
+        
+        &_pb-l {
+            padding-bottom: 100px;
+
+            @media (max-width: $laptop) {
+                padding-bottom: 50px;
+            }
+
+            @media (max-width: $mobile-l) {
+                padding-bottom: 0;
+            }
+        }
     }
 }
 
@@ -52,6 +63,9 @@ body {
 @import "./components/zoom-in-img";
 @import "./components/modals/modal";
 @import "./components/section";
+@import "./components/breadcrumbs";
+@import "./components/page-header";
+@import "./components/tabs";
 
 // Карточки
 @import "./components/cards/room";
@@ -64,7 +78,7 @@ body {
 // Текстовые компоненты
 @import "./components/text";
 
-// Секции
+// Секции (Главная страница)
 @import "./sections/header";
 @import "./sections/menu";
 @import "./sections/main";
@@ -79,3 +93,6 @@ body {
 @import "./sections/s-contacts";
 @import "./sections/s-location";
 @import "./sections/footer";
+
+// Другие страницы
+@import "./sections/s-acc";

@@ -1,0 +1,17 @@
+.page-header {
+    margin-top: 24px;
+}
+
+.page-header__wrap {
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $text-primary;
+
+    @media (max-width: $laptop) {
+        padding-bottom: 10px;
+    }
+}
+
+.page-header__title {
+
+}

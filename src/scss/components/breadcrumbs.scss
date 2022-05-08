@@ -1,0 +1,38 @@
+.breadcrumbs {
+    padding: 24px 0;
+    overflow-x: auto;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__item {
+    font-size: 16px;
+    font-weight: 300;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+        margin-right: 34px;
+        
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            background: center/contain no-repeat url('data:image/svg+xml,%3Csvg width=\"21\" height=\"17\" viewBox=\"0 0 21 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath opacity=\"0.5\" d=\"M0 8.5H20M20 8.5L11.6129 1M20 8.5L11.6129 16\" stroke=\"%23212020\"/%3E%3C/svg%3E');
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+    }
+
+    &:last-child {
+        padding-right: 20px;
+    }
+
+
+    & a {
+        opacity: .5;
+    }
+}

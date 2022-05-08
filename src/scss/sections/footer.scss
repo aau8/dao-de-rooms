@@ -26,12 +26,14 @@
     }
 
     @media (max-width: $tablet) {
+        align-items: center;
         margin-top: 30px;
     }
 }
 
 .footer__logo {
     height: 68px;
+    margin: 0;
 }
 
 .footer__copyright {
@@ -44,6 +46,10 @@
     @media (max-width: $laptop) {
         text-align: left;
         margin-top: 20px;
+    }
+
+    @media (max-width: $tablet) {
+        text-align: center;
     }
 }
 
@@ -71,7 +77,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px 48px;
-        margin: 0;
+        // margin: 0;
+        margin-left: 100px;
     }
 
     @media (max-width: 820px) {
@@ -113,6 +120,7 @@
 .footer-block__title {
     max-width: 140px;
     font-size: 14px;
+    font-weight: 500;
     padding-bottom: 8px;
     border-bottom: 1px solid #fff;
 }
