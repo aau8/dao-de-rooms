@@ -58,7 +58,7 @@
     }
 }
 
-.s-contacts__title {
+.sc-title {
     font-size: 36px;
     font-weight: 400;
 
@@ -195,6 +195,20 @@
 .sc-quest {
     max-width: 315px;
     width: 100%;
+    
+    &_dark {
+
+        & .tf__field input,
+        & .tf__field textarea {
+            color: $text-primary;
+            border-color: $text-primary;
+        }
+
+        & .tf__field label {
+            font-weight: 300;
+            color: $text-primary;
+        }
+    }
 
     @media (max-width: $mobile-l) {
         max-width: none;

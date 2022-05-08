@@ -1,0 +1,41 @@
+.ssc__body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    & .sc-us {
+        width: 336px;
+        font-weight: 400;
+        border: none;
+
+        & .sc-us__list {
+
+            & li a::before {
+                background: $text-primary;
+            }
+        }
+    }
+}
+
+.ssc__img {
+    position: relative;
+    max-width: 590px;
+    width: 45%;
+    margin: 0 24px;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 60%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+}

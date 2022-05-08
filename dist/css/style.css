@@ -3440,7 +3440,7 @@ body._lock {
   padding: 70px 60px 70px 117px;
 }
 
-.s-contacts__title {
+.sc-title {
   font-size: 36px;
   font-weight: 400;
 }
@@ -3532,6 +3532,17 @@ body._lock {
 .sc-quest {
   max-width: 315px;
   width: 100%;
+}
+
+.sc-quest_dark .tf__field input,
+.sc-quest_dark .tf__field textarea {
+  color: #212020;
+  border-color: #212020;
+}
+
+.sc-quest_dark .tf__field label {
+  font-weight: 300;
+  color: #212020;
 }
 
 .sc-quest__tf-list {
@@ -3697,6 +3708,53 @@ body._lock {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.ssc__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ssc__body .sc-us {
+  width: 336px;
+  font-weight: 400;
+  border: none;
+}
+
+.ssc__body .sc-us .sc-us__list li a::before {
+  background: #212020;
+}
+
+.ssc__img {
+  position: relative;
+  max-width: 590px;
+  width: 45%;
+  margin: 0 24px;
+}
+
+.ssc__img::before {
+  content: "";
+  display: block;
+  padding-top: 60%;
+}
+
+.ssc__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 @media (min-width: 769px) {
@@ -4089,7 +4147,7 @@ body._lock {
     padding: 100px 50px;
   }
 
-  .s-contacts__title {
+  .sc-title {
     font-size: 30px;
   }
 
