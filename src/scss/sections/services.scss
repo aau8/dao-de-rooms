@@ -1,0 +1,15 @@
+.services__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 40px;
+
+    @media (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: $mobile-l) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}

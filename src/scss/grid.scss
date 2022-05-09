@@ -1,6 +1,7 @@
 // ================ Container Start ================
 $container: 1608px;
-$container-gap: 24px;
+$container-gap: 60px;
+$container-gap-laptop: 50px;
 $container-gap-mobile: 20px;
 // ================ Container End ================
 
@@ -15,9 +16,28 @@ $container-gap-mobile: 20px;
     padding-right: $container-gap;
     margin: 0 auto;
 
+    @media (max-width: $laptop) {
+        padding-left: $container-gap-laptop;
+        padding-right: $container-gap-laptop;
+    }
+
+    @media (max-width: 1000px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
     @media (max-width: $mobile-l) {
         padding-left: $container-gap-mobile;
         padding-right: $container-gap-mobile;
+    }
+
+    &_header,
+    &_footer {
+        padding: 0 24px;
+
+        @media (max-width: $mobile-l) {
+            padding: 0 20px;
+        }
     }
 }
 

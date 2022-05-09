@@ -28,9 +28,9 @@
 }
 
 // Адаптивный размер
-@function adsize($minSize, $maxSize, $minScreen, $maxScreen) {
-    @return calc( (100vw - #{$minScreen}px)/(#{$maxScreen} - #{$minScreen}) * (#{$maxSize} - #{$minSize}) + #{$minSize}px);
-}
+// @function adsize($minSize, $maxSize, $minScreen, $maxScreen) {
+//     @return calc( (100vw - #{$minScreen}px)/(#{$maxScreen} - #{$minScreen}) * (#{$maxSize} - #{$minSize}) + #{$minSize}px);
+// }
 
 // Адаптивный размер
 @mixin res-size($property, $minSize, $maxSize, $minScreen, $maxScreen) {

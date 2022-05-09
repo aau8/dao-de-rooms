@@ -1,0 +1,115 @@
+.s-card {
+    width: 100%;
+
+    &:active {
+
+        & .s-card__img img {
+            transform: scale(.9);
+        }
+    }
+
+    @media (min-width: $min-hover) {
+        
+        &:hover {
+
+            & .s-card__img img {
+                transform: scale(1.1);
+            }
+        }
+
+        &:active {
+
+            & .s-card__img img {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.s-card__img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 58%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $tr;
+    }
+}
+
+.s-card__content {
+    margin-top: 30px;
+    padding: 0 20px;
+
+    @media (max-width: 1300px) {
+        padding: 0;
+    }
+}
+
+.s-card__title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: $tr;
+}
+
+.s-card__title-text {
+    font-size: 36px;
+    line-height: 1.2;
+
+    @include res-size(font-size, 24, 36, 1024, 1700);
+    
+    @media (max-width: $laptop) {
+        font-size: 30px;
+    }
+
+    @include res-size(font-size, 24, 36, 600, 1024);
+    @include res-size-mw(font-size, 24, 36, 320, 425);
+
+    @media (max-width: $mobile-l) {
+        font-size: 25px;
+    }
+}
+
+.s-card__title-icon {
+    min-width: 32px;
+    width: 42px;
+    height: 29px;
+    margin: 4px 0 0 12px;
+
+    @include res-size(width, 32, 42, 1024, 1700);
+    @include res-size(width, 32, 42, 600, 1024);
+    @include res-size-mw(width, 32, 42, 320, 425);
+}
+
+.s-card__list {
+    margin-top: 17px;
+
+    & li {
+        font-size: 18px;
+        font-weight: 400;
+
+        @include res-size(font-size, 14, 18, 1024, 1700);
+        @include res-size(font-size, 14, 18, 600, 1024);
+        @include res-size-mw(font-size, 14, 18, 320, 425);
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+
+            @include res-size(margin-bottom, 4, 10, 1024, 1700);
+            @include res-size(margin-bottom, 4, 10, 600, 1024);
+            @include res-size-mw(margin-bottom, 4, 10, 320, 425);
+        }
+    }
+}

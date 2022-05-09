@@ -27,7 +27,8 @@
     font-size: 18px;
     background: none;
     border-bottom: 1px solid #fff;
-    padding: 20px 0 8px 0;
+    // padding: 20px 0 8px 0;
+    padding: 24px 0 4px 0;
 }
 
 .tf__field label {
@@ -43,7 +44,11 @@
     transition: $tr;
 
     &._change-label {
-        transform: translate(-16%, -120%) scale(0.7);
+        top: 0;
+        transform: translate(-16%, 0) scale(0.7);
+        // transform: translate(-16%, -120%) scale(0.7);
+        // transform: translate(100px, -50%);
+        // opacity: 0;
     }
 }
 
@@ -54,7 +59,7 @@
         transform: translate(0, 0);
 
         &._change-label {
-            transform: translate(-16%, -80%) scale(0.7);
+            // transform: translate(-16%, -80%) scale(0.7);
         }
     }
 }

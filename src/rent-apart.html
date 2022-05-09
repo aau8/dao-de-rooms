@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('./modules/header.html', { mod: '' })
+        <div class="breadcrumbs">
+            <div class="container"> 
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Аренда</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content content_pb-l">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrap">
+                        <h1 class="title-section page-header__title">Аренда апартаментов</h1>
+                    </div>
+                </div>
+            </section>
+            @@include('./modules/contacts-small.html', { section: 'section' })
+        </div>
+
+@@include('./modules/footer.html')

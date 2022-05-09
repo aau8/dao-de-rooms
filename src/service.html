@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('./modules/header.html', { mod: '' })
+        <div class="breadcrumbs">
+            <div class="container"> 
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="link" href="#">Дополнительно</a></li>
+                    <li class="breadcrumbs__item">Кальян</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content content_pb-l">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrap">
+                        <h1 class="title-section page-header__title">Кальян</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="service-main">
+                <div class="container">
+                    <div class="service-main__wrap">
+                        <div class="service-main__img"><img src="@img/services/cards/1.png" alt=""></div>
+                        <div class="service-main__content">
+                            <div class="service-main__info">
+                                <p>
+                                    Неизменный атрибут восточной роскоши и королевского отдыха. Классический, на фруктах, на молоке, на вине — с огромным разнообразием ароматов. Опытный мастер кальяна поможет придать вашему отдыху действительно расслабляющую атмосферу.  Не думайте ни о чем, просто отдыхайте среди чарующих ароматов востока.
+                                    <br><br>
+                                    В услугу кальянного кейтеринга входит: аренда и обслуживание кальяна, табак (от стандартных до премиальных), фруктовые чаши, работа кальянного мастера и доставка всего необходимого.
+                                    <br><br>
+                                    Если вы хотите использовать свой кальян, мы с удовольствием предоставим вам печь и корзину для углей (услуга обязательна, пробковый сбор).
+                                </p>
+                            </div>
+                            <a href="javascript:void(0)" class="btn-more service-main__calc-amount">
+                                <span class="btn-more__text">Рассчитать стоимость</span>
+                                <div class="btn-more__icon">
+                                    <svg width="98" height="31" viewBox="0 0 98 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 15.5H97M97 15.5L83.0406 1M97 15.5L83.0406 30" stroke="#212020"/>
+                                    </svg>                                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-main__scribble">
+                    <svg width="608" height="225" viewBox="0 0 608 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M394.345 173.606C484.547 165.267 651.308 132.212 596.732 66.7089C528.512 -15.1701 96.4503 71.2577 82.8062 130.392C69.1622 189.527 221.521 250.936 364.783 212.271C508.046 173.606 569.444 9.84864 321.577 0.750955C123.284 -6.52719 25.1981 70.4997 0.941975 109.923" stroke="#CBBDAE" stroke-width="0.5"/>
+                    </svg>                        
+                </div>
+            </section>
+            <section class="section section_theme-dark s-favorite">
+                <div class="container">
+                    <div class="s-favorite__wrap">
+                        <div class="s-header">
+                            <div class="s-header__content">
+                                <h2 class="title-section s-header__title">Вам может понравится</h2>
+                            </div>
+                        </div>
+                        <div class="s-favorite__body">
+                            <div class="s-favorite__list">
+                                <a href="javascript:void(0)" class="s-card">
+                                    <div class="s-card__img"><img src="@img/services/cards/4.png" alt=""></div>
+                                    <div class="s-card__content">
+                                        <div class="s-card__title">
+                                            <h3 class="s-card__title-text">Кейтеринг</h3>
+                                            <div class="s-card__title-icon">
+                                                <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#96857E"/>
+                                                </svg>                                            
+                                            </div>
+                                        </div>
+                                        <ul class="s-card__list">
+                                            <li>1  час - 4 000 ₽</li>
+                                            <li>Фотозона - 2 000 ₽</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" class="s-card">
+                                    <div class="s-card__img"><img src="@img/services/cards/2.png" alt=""></div>
+                                    <div class="s-card__content">
+                                        <div class="s-card__title">
+                                            <h3 class="s-card__title-text">Кулинарное шоу</h3>
+                                            <div class="s-card__title-icon">
+                                                <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#96857E"/>
+                                                </svg>                                            
+                                            </div>
+                                        </div>
+                                        <ul class="s-card__list">
+                                            <li>1  час - 4 000 ₽</li>
+                                            <li>Фотозона - 2 000 ₽</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" class="s-card">
+                                    <div class="s-card__img"><img src="@img/services/cards/3.png" alt=""></div>
+                                    <div class="s-card__content">
+                                        <div class="s-card__title">
+                                            <h3 class="s-card__title-text">Выездной бар</h3>
+                                            <div class="s-card__title-icon">
+                                                <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#96857E"/>
+                                                </svg>                                            
+                                            </div>
+                                        </div>
+                                        <ul class="s-card__list">
+                                            <li>1  час - 4 000 ₽</li>
+                                            <li>Фотозона - 2 000 ₽</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="javascript:void(0)" class="btn-more s-favorite__more">
+                                <span class="btn-more__text">Смотреть ещё</span>
+                                <div class="btn-more__icon">
+                                    <svg width="98" height="31" viewBox="0 0 98 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 15.5H97M97 15.5L83.0406 1M97 15.5L83.0406 30" stroke="#CBBDAE"/>
+                                    </svg>                                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            @@include('./modules/contacts-small.html', { section: 'section_s' })
+        </div>
+
+@@include('./modules/footer.html')

@@ -1,0 +1,29 @@
+.s-favorite__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media (min-width: 600px) and (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        & > .s-card:last-child {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+.s-favorite__more {
+    width: fit-content;
+    margin: 100px auto 0 auto;
+
+    @media (max-width: $laptop) {
+        margin-top: 50px;
+    }
+}

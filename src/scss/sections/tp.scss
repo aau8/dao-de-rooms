@@ -122,7 +122,7 @@
 
     @media (max-width: $tablet) {
         order: 1;
-        grid-template-rows: 1fr;
+        // grid-template-rows: 1fr;
     }
 }
 
@@ -138,12 +138,12 @@
         height: 100%;
     }
 
-    &:nth-child(2) {
+    // &:nth-child(2) {
 
-        @media (max-width: $tablet) {
-            display: none;
-        }
-    }
+    //     @media (max-width: $tablet) {
+    //         display: none;
+    //     }
+    // }
 }
 
 // Блок с двумя картинками в колонку
@@ -232,10 +232,10 @@
     }
 }
 
-.tp__block_fourth,
-.tp__block_fifth {
+// .tp__block_fourth,
+// .tp__block_fifth {
 
-    @media (max-width: $laptop) {
-        display: none;
-    }
-}
+//     @media (max-width: $laptop) {
+//         // display: none;
+//     }
+// }

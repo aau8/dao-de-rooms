@@ -74,6 +74,7 @@ body {
 @import "./components/cards/se-card";
 @import "./components/cards/si-card";
 @import "./components/cards/sa-card";
+@import "./components/cards/s-card";
 
 // Текстовые компоненты
 @import "./components/text";
@@ -97,3 +98,8 @@ body {
 // Другие страницы
 @import "./sections/s-acc";
 @import "./sections/ssc";
+@import "./sections/services-main";
+@import "./sections/services";
+@import "./sections/g-events";
+@import "./sections/service";
+@import "./sections/s-favorite";

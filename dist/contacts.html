@@ -7,13 +7,13 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap&_v=20220509002721" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220509002721">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap&_v=20220509205331" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220509205331">
 </head>
 <body>
 	<div class="wrapper">
         <header class="header ">
-    <div class="container">
+    <div class="container container_header">
         <div class="header__wrap">
             <a href="javascript:void(0)" class="logo header__logo"><img src="./img/logo.svg" alt=""></a>
             <nav class="menu">
@@ -107,73 +107,74 @@
                     </div>
                 </div>
             </section>
-            <!-- ssc -->
-            <section class="section_s ssc">
-                <div class="container">
-                    <div class="ssc__wrap">
-                        <div class="ssc__body">
-                            <div class="sc-quest sc-quest_dark">
-                                <h2 class="sc-title">Возник вопрос?</h2>
-                                <form action="#" class="sc-quest__form">
-                                    <div class="sc-quest__tf-list">
-                                        <div class="tf">
-                                            <div class="tf__field">
-                                                <input type="text">
-                                                <label>Имя</label>
-                                            </div>
-                                        </div>
-                                        <div class="tf">
-                                            <div class="tf__field">
-                                                <input type="text">
-                                                <label>E-mail</label>
-                                            </div>
-                                        </div>
-                                        <div class="tf">
-                                            <div class="tf__field">
-                                                <input type="text">
-                                                <label>Телефон</label>
-                                            </div>
-                                        </div>
-                                        <div class="tf">
-                                            <div class="tf__field tf__field_textarea">
-                                                <textarea type="text"></textarea>
-                                                <label>Комментарий</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn_accent sc-quest__submit" type="submit">Отправить сообщение</button>
-                                </form>
+            <!-- ssc - section small contacts-->
+<section class="section_s ssc">
+    <div class="container">
+        <div class="ssc__wrap">
+            <div class="ssc__body">
+                <div class="sc-quest sc-quest_dark">
+                    <h2 class="sc-title">Возник вопрос?</h2>
+                    <form action="#" class="sc-quest__form">
+                        <div class="sc-quest__tf-list">
+                            <div class="tf">
+                                <div class="tf__field">
+                                    <input type="text">
+                                    <label>Имя</label>
+                                </div>
                             </div>
-                            <div class="ssc__img"><picture><source srcset="./img/contacts/section.webp" type="image/webp"><img src="./img/contacts/section.png" alt=""></picture></div>
-                            <div class="sc-us">
-                                <h2 class="sc-title">Контакты</h2>
-                                <ul class="sc-us__list">
-                                    <li>Сеть апартаментов во Владивостоке</li>
-                                    <li>Тигровая улица 16а - 215, вторая блоксекция, 21 этаж, кв 215</li>
-                                    <li>Без перерывов и выходных</li>
-                                    <li>тел. <a href="tel:+79990593032">+7 999 059 30 32</a></li>
-                                    <li>Email: <a href="mailto:daoonline@mail.ru">daoonline@mail.ru</a></li>
-                                </ul>
-                                <a href="javascript:void(0)" class="sc-us__insta">
-                                    <div class="sc-us__insta-icon">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0.666667H6C3.05448 0.666667 0.666667 3.05448 0.666667 6V14C0.666667 16.9455 3.05448 19.3333 6 19.3333H14C16.9455 19.3333 19.3333 16.9455 19.3333 14V6C19.3333 3.05448 16.9455 0.666667 14 0.666667ZM6 0C2.68629 0 0 2.68629 0 6V14C0 17.3137 2.68629 20 6 20H14C17.3137 20 20 17.3137 20 14V6C20 2.68629 17.3137 0 14 0H6Z" fill="#212020"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99984 14.6665C12.5772 14.6665 14.6665 12.5772 14.6665 9.99984C14.6665 7.42251 12.5772 5.33317 9.99984 5.33317C7.42251 5.33317 5.33317 7.42251 5.33317 9.99984C5.33317 12.5772 7.42251 14.6665 9.99984 14.6665ZM9.99984 15.3332C12.9454 15.3332 15.3332 12.9454 15.3332 9.99984C15.3332 7.05432 12.9454 4.6665 9.99984 4.6665C7.05432 4.6665 4.6665 7.05432 4.6665 9.99984C4.6665 12.9454 7.05432 15.3332 9.99984 15.3332Z" fill="#212020"/>
-                                            <path d="M16.6665 4.3335C16.6665 4.88578 16.2188 5.3335 15.6665 5.3335C15.1142 5.3335 14.6665 4.88578 14.6665 4.3335C14.6665 3.78121 15.1142 3.3335 15.6665 3.3335C16.2188 3.3335 16.6665 3.78121 16.6665 4.3335Z" fill="#212020"/>
-                                        </svg>                                        
-                                    </div>
-                                    <span class="sc-us__insta-text">Мы в Инстаграм</span>
-                                </a>
-                                <button class="btn btn_accent sc-us__callback">Заказать звонок</button>
+                            <div class="tf">
+                                <div class="tf__field">
+                                    <input type="text">
+                                    <label>E-mail</label>
+                                </div>
+                            </div>
+                            <div class="tf">
+                                <div class="tf__field">
+                                    <input type="text">
+                                    <label>Телефон</label>
+                                </div>
+                            </div>
+                            <div class="tf">
+                                <div class="tf__field tf__field_textarea">
+                                    <textarea></textarea>
+                                    <label>Комментарий</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <button class="btn btn_accent sc-quest__submit" type="submit">Отправить сообщение</button>
+                    </form>
                 </div>
-            </section>
+                <div class="ssc__img"><picture><source srcset="./img/contacts/section.webp" type="image/webp"><img src="./img/contacts/section.png" alt=""></picture></div>
+                <div class="sc-us"> 
+                    <div class="sc-us__content">
+                        <ul class="sc-us__list">
+                            <li>Сеть апартаментов во Владивостоке</li>
+                            <li>Тигровая улица 16а - 215, вторая блоксекция, 21 этаж, кв 215</li>
+                            <li>Без перерывов и выходных</li>
+                            <li>тел. <a href="tel:+79990593032">+7 999 059 30 32</a></li>
+                            <li>Email: <a href="mailto:daoonline@mail.ru">daoonline@mail.ru</a></li>
+                        </ul>
+                        <a href="javascript:void(0)" class="sc-us__insta">
+                            <div class="sc-us__insta-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0.666667H6C3.05448 0.666667 0.666667 3.05448 0.666667 6V14C0.666667 16.9455 3.05448 19.3333 6 19.3333H14C16.9455 19.3333 19.3333 16.9455 19.3333 14V6C19.3333 3.05448 16.9455 0.666667 14 0.666667ZM6 0C2.68629 0 0 2.68629 0 6V14C0 17.3137 2.68629 20 6 20H14C17.3137 20 20 17.3137 20 14V6C20 2.68629 17.3137 0 14 0H6Z" fill="#212020"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99984 14.6665C12.5772 14.6665 14.6665 12.5772 14.6665 9.99984C14.6665 7.42251 12.5772 5.33317 9.99984 5.33317C7.42251 5.33317 5.33317 7.42251 5.33317 9.99984C5.33317 12.5772 7.42251 14.6665 9.99984 14.6665ZM9.99984 15.3332C12.9454 15.3332 15.3332 12.9454 15.3332 9.99984C15.3332 7.05432 12.9454 4.6665 9.99984 4.6665C7.05432 4.6665 4.6665 7.05432 4.6665 9.99984C4.6665 12.9454 7.05432 15.3332 9.99984 15.3332Z" fill="#212020"/>
+                                    <path d="M16.6665 4.3335C16.6665 4.88578 16.2188 5.3335 15.6665 5.3335C15.1142 5.3335 14.6665 4.88578 14.6665 4.3335C14.6665 3.78121 15.1142 3.3335 15.6665 3.3335C16.2188 3.3335 16.6665 3.78121 16.6665 4.3335Z" fill="#212020"/>
+                                </svg>                                        
+                            </div>
+                            <span class="sc-us__insta-text">Мы в Инстаграм</span>
+                        </a>
+                    </div>
+                    <button class="btn btn_accent sc-us__callback">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
 
 <footer class="footer section_theme-dark">
-    <div class="container">
+    <div class="container container_footer">
         <div class="footer__wrap">
             <div class="footer__info">
                 <a href="javascript:void(0)" class="logo footer__logo"><img src="./img/logo.svg" alt=""></a>
@@ -256,6 +257,6 @@
 </button> 
 
 </div>
-<script src="./js/bundle.min.js?_v=20220509002721"></script>
+<script src="./js/bundle.min.js?_v=20220509205331"></script>
 </body>
 </html>

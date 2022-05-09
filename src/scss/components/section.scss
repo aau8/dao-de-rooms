@@ -31,6 +31,14 @@
     align-items: center;
     margin-bottom: 64px;
     text-align: center;
+
+    @media (max-width: $laptop) {
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-bottom: 30px;
+    }
 }
 
 .s-header__content {
