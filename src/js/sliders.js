@@ -1,4 +1,4 @@
-import Swiper, { Navigation, EffectFade, Thumbs, Autoplay, Pagination, FreeMode } from 'swiper'
+import Swiper, { Navigation, EffectFade, Thumbs, Autoplay, Pagination, FreeMode, Scrollbar } from 'swiper'
 // import 'swiper/css'
 // import 'swiper/css/effect-fade'
 

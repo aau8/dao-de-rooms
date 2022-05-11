@@ -2,7 +2,7 @@
 $container: 1608px;
 $container-gap: 60px;
 $container-gap-laptop: 50px;
-$container-gap-mobile: 20px;
+$container-gap-mobile: 16px;
 // ================ Container End ================
 
 @function mwContainer($cw) {
@@ -36,7 +36,7 @@ $container-gap-mobile: 20px;
         padding: 0 24px;
 
         @media (max-width: $mobile-l) {
-            padding: 0 20px;
+            padding: 0 $container-gap-mobile;
         }
     }
 }

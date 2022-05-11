@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('./modules/header.html', { mod: '' })
+        <div class="breadcrumbs">
+            <div class="container"> 
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Галерея</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content content_pb-l">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrap">
+                        <h1 class="title-section page-header__title">Галерея</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="container">
+                    <div class="gallery__wrap">
+                        <div class="gallery__tabs">
+                            <div class="swiper-wrapper">
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="events">Мероприятия</button>
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="gatsby-lounge">Gatsby Lounge</button>
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="alpine-sunrise">Alpine Sunrise</button>
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="oriental-fusion">Oriental Fusion</button>
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="arabian-nights">Arabian Nights</button>
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="bali-dreams">Bali Dreams</button>
+                                <button class="swiper-slide gallery-tab" data-gallery-tab="pop-art-factory">Pop Art Factory</button>
+                            </div>
+                        </div>
+                        <div class="gallery__tabs-options">
+                            <div class="swiper-scrollbar gallery__tabs-scrollbar swiper-scrollbar-lock"></div>
+
+                            <div class="swiper__arrows gallery__tabs-arrows">
+                                <button class="swiper__arrow gallery__tabs-arrow gallery__tabs-arrow-prev swiper-button-lock swiper-button-disabled">
+                                    <svg width="48" height="27" viewBox="0 0 48 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M48 13.5H0.999998M0.999998 13.5L13.1037 1M0.999998 13.5L13.1037 26" stroke="#213D37"/>
+                                    </svg>                                    
+                                </button>
+                                <button class="swiper__arrow gallery__tabs-arrow gallery__tabs-arrow-next swiper-button-lock">
+                                    <svg width="48" height="27" viewBox="0 0 48 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 13.5H47M47 13.5L34.8963 1M47 13.5L34.8963 26" stroke="#213D37"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery__grid">
+                            <div class="gallery__grid-sizer"></div>
+                            <!-- <div class="gallery__grid-item" data-gallery-id="1" data-gallery-cat="events"><img src="@img/gallery/1.png" alt="" data-zoom></div>
+                            <div class="gallery__grid-item" data-gallery-id="2" data-gallery-cat="events"><img src="@img/gallery/2.png" alt="" data-zoom></div>
+                            <div class="gallery__grid-item" data-gallery-id="3" data-gallery-cat="events"><img src="@img/gallery/3.png" alt="" data-zoom></div>
+                            <div class="gallery__grid-item" data-gallery-id="4" data-gallery-cat="events"><img src="@img/gallery/4.png" alt="" data-zoom></div>
+                            <div class="gallery__grid-item" data-gallery-id="5" data-gallery-cat="events"><img src="@img/gallery/5.png" alt="" data-zoom></div>
+                            <div class="gallery__grid-item" data-gallery-id="6" data-gallery-cat="events"><img src="@img/gallery/6.png" alt="" data-zoom></div> -->
+                        </div>
+                        <button class="btn-more gallery__btn-more _load">
+                            <span class="btn-more__text">Смотреть еще</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+@@include('./modules/footer.html')

@@ -19,44 +19,37 @@
         }
 
         @media (max-width: $tablet) {
+            width: 100%;
             max-width: none;
         }
 
-        & .sc-title {
-            font-weight: 300;
-        }
+        // & .sc-title {
+        //     font-weight: 300;
+        // }
 
-        & .sc-quest__tf-list {
+        // & .sc-quest__tf-list {
             
-            & > .tf {
+        //     & > .tf {
 
-                &:not(:last-child) {
-                    margin-bottom: 4px;
+        //         &:not(:last-child) {
+        //             margin-bottom: 4px;
+        //         }
 
-                    // @media (max-width: $laptop) {
-                    //     margin-bottom: 12px;
-                    // }
+        //         & input,
+        //         & textarea {
+        //             font-size: 16px;
+        //             padding-top: 20px;
+        //         }
 
-                    // @media (max-width: $mobile-l) {
-                    //     margin-bottom: 8px;
-                    // }
-                }
+        //         & label {
+        //             font-size: 16px;
+        //         }
 
-                & input,
-                & textarea {
-                    font-size: 16px;
-                    padding-top: 20px;
-                }
-
-                & label {
-                    font-size: 16px;
-                }
-
-                & .tf__field_textarea {
-                    height: 60px;
-                }
-            }
-        }
+        //         & .tf__field_textarea {
+        //             height: 60px;
+        //         }
+        //     }
+        // }
     }
 
     & .sc-us {
@@ -71,6 +64,7 @@
         }
 
         @media (max-width: $tablet) {
+            max-width: none;
             width: 100%;
             margin-top: 32px;
         }
@@ -82,16 +76,13 @@
                 background: $text-primary;
             }
         }
-
-        & .sc-us__callback {
-            // margin-top: auto;
-        }
     }
 }
 
 .ssc__img {
     position: relative;
     max-width: 590px;
+    min-width: 220px;
     width: 45%;
     margin: 0 24px;
     overflow: hidden;

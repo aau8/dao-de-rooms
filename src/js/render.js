@@ -86,6 +86,7 @@ if (window.innerWidth > 768) {
     }
 }
 
+
 // Отступы у контента карточек в разделе Мероприятия, чтобы заголовок всегда полностью помещался
 if (window.innerWidth > 670) {
     const cardElems = document.querySelectorAll('.se-card')

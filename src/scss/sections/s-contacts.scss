@@ -69,15 +69,50 @@
 
 // Наши контакты
 .sc-us {
+    max-width: 315px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $text-light-second;
     padding-bottom: 50px;
     margin-bottom: 50px;
-
+    
     @media (max-width: $mobile-l) {
+        // max-width: none;
         border: none;
         padding-bottom: 0;
+    }
+
+    &_dark {
+
+        & .sc-us__list {
+
+            & li a::before {
+                background: $text-primary;
+            }
+        }
+
+    }
+
+    &_small {
+        // width: 336px;
+        font-weight: 400;
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        @media (max-width: 1000px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin-top: 32px;
+        }
+
+        & .sc-us__list {
+            margin: 0;
+        }
     }
 }
 
@@ -200,8 +235,6 @@
 
 // Возник вопрос?
 .sc-quest {
-    max-width: 315px;
-    width: 100%;
     
     &_dark {
 
@@ -217,7 +250,43 @@
         }
     }
 
-    @media (max-width: $mobile-l) {
+    &_small {
+
+        & .sc-title {
+            font-weight: 300;
+        }
+
+        & .sc-quest__tf-list {
+            
+            & > .tf {
+
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+
+                & input,
+                & textarea {
+                    font-size: 16px;
+                    padding-top: 20px;
+                }
+
+                & label {
+                    font-size: 16px;
+                }
+
+                & .tf__field_textarea {
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+
+.sc-quest__form {
+    max-width: 315px;
+    width: 100%;
+
+    @media (max-width: $tablet) {
         max-width: none;
     }
 }

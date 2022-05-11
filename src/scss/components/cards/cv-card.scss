@@ -1,0 +1,96 @@
+.cv-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #96857E;
+    padding: 50px 30px;
+    overflow: hidden;
+
+    @media (min-width: $min-hover) {
+        
+        &:hover {
+            
+            & .cv-card__img {
+
+                transform: scale(1.1);
+            }
+        }
+
+        &:active {
+            
+            & .cv-card__img {
+
+                transform: scale(1);
+            }
+        }
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 35px 20px;
+    }
+
+    &:active {
+        
+        & .cv-card__img {
+
+            transform: scale(.9);
+        }
+    }
+}
+
+.cv-card__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: $tr;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(33, 61, 55, 0.9), rgba(33, 61, 55, 0.9));
+    }
+
+    & img {
+
+        object-fit: cover;
+    }
+}
+
+.cv-card__content {
+    flex: 1 1 0;
+}
+
+.cv-card__title {
+    font-size: 36px;
+
+    @include res-size(font-size, 28, 36, 1150, 1700);
+    @include res-size(font-size, 24, 36, 710, 1024);
+    @include res-size-mw(font-size, 20, 36, 320, 600);
+}
+
+.cv-card__text {
+    margin-top: 20px;
+
+    @include res-size-mw(font-size, 14, 16, 320, 425);
+}
+
+.cv-card__more {
+    color: $text-light;
+    margin-top: 24px;
+
+    & .btn-more__text {
+        font-weight: 500;
+
+        @include res-size(font-size, 18, 24, 1150, 1700);
+        @include res-size(font-size, 18, 24, 710, 1024);
+        @include res-size-mw(font-size, 16, 24, 320, 600);
+    }
+}

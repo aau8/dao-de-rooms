@@ -5,7 +5,7 @@ $text-light: #CBBDAE;
 $text-light-second: #D3D3D3;
 $text-second: brig-color($text-primary, -10%);
 $text-accent: #FFCD6D;
-$link-active: brig-color(#FFCD6D, -30%);
+$link-active: brig-color($text-accent, -30%);
 
 // Фирменный цвет
 $firm-color: #213D37;

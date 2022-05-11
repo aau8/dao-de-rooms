@@ -4,22 +4,23 @@ import "./render.js";
 import "./modals.js";
 import "./sliders.js";
 import "./tabs.js"
+import "./gallery.js"
 
 // Меню
 window.addEventListener('resize', menu)
-menu()
 
-function menu() {
+menu()
+function menu() { 
+    const menu = document.querySelector('.menu')
+    const burgerElems = document.querySelectorAll('.burger')
+    
+    burgerElems.forEach(burger => {
+        burger.addEventListener("click", (e) => {
+            menu.classList.toggle('_show')       
+            bodyLock()
+        });
+    })
     if (window.innerWidth <= 1100) {
-        const menu = document.querySelector('.menu')
-        const burgerElems = document.querySelectorAll('.burger')
-        
-        burgerElems.forEach(burger => {
-            burger.addEventListener("click", (e) => {
-                menu.classList.toggle('_show')       
-                bodyLock()
-            });
-        })
     }
 }
 
@@ -27,13 +28,6 @@ function menu() {
 zoomInImg()
 function zoomInImg() {
     const TR = 300
-    const zoomInImgElems = document.querySelectorAll("[data-zoom]")
-
-    for (let i = 0; i < zoomInImgElems.length; i++) {
-        const zoomInImg = zoomInImgElems[i]
-        
-        zoomInImg.style.cursor = "zoom-in"
-    }
 
     window.addEventListener('click', e => {
         const target = e.target
@@ -42,10 +36,10 @@ function zoomInImg() {
             const imgSrc = target.getAttribute("src")
             const bigImg = document.createElement("div")
 
-            console.log(target.naturalWidth)
+            // console.log(target.naturalWidth)
         
             bigImg.classList.add("big-img")
-            bigImg.style.cursor = "zoom-out"
+            // bigImg.style.cursor = "zoom-out"
             bigImg.style.setProperty('--zoom-img-transition', TR + 'ms')
         
             bigImg.innerHTML = `<div class="big-img__body" data-zoom-out><img src="${imgSrc}" style="max-width:${target.naturalWidth}px;" alt=""></div>`

@@ -1,6 +1,10 @@
 .page-header {
     // margin-top: 24px;
     margin: 24px 0 50px;
+
+    @media (max-width: $mobile-l) {
+        margin: 16px 0 32px;
+    }
 }
 
 .page-header__wrap {

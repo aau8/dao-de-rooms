@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('./modules/header.html', { mod: '' })
+        <div class="breadcrumbs">
+            <div class="container"> 
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Манифест</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content content_pb-l">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrap">
+                        <h1 class="title-section page-header__title">Манифест</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="manif">
+                <div class="container">
+                    <div class="manif__wrap">
+                        <div class="manif-block manif-block_full manif-block_first">
+                            <div class="manif-block__content">
+                                <h2 class="title-section manif-block__title">Путешествия – это наша страсть</h2>
+                                <p class="manif-block__text">
+                                    Мы хотим увидеть мир. Изучить его. Жаждем узнать - что там за горизонтом.
+                                    <br>
+                                    Мы мечтатели... Мы хотим наблюдать мир под разным углом и ракурсом, исследовать его, наслаждаться временем, проведенным в самых потрясающих точках планеты.
+                                    <br><br>
+                                    Путешествия – наша страсть. Более 50 перелетов в год, десятки стран, сотни отелей: от люксовых и сетевых гигантов, до уютных домиков в отдаленных частях света.
+                                    <br>
+                                    Мы научились замечать по-настоящему важные детали и понимаем что нужно путешественнику вдали от дома.
+                                    <br><br>
+                                    Dao dé Rooms – это синтез многолетнего опыта и искренней любви к путешествиям, где мы решили объединить все лучшее, что встречали в отелях и апартаментах по всему миру. Мы загорелись идеей создать идеальное пространство, в которое хочется возвращаться.
+                                </p>
+                            </div>
+                            <div class="manif-block__img-container">
+                                <div class="manif-block__img"><img src="@img/manifest/1.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="manif-block manif-block_reverse manif-block_second">
+                            <div class="manif-block__content">
+                                <p class="manif-block__text">
+                                    Перебирая воспоминания, мы осознали, что самые яркие и ценные впечатления дарит именно этот формат.
+                                    <br><br>
+                                    У апартаментов есть душа, в них можно встретить прекрасные и удивительные, а порой даже безумные дизайнерские решения. Предпочитая их отельному отдыху - вы сразу погружаетесь в атмосферу и культуру города. Так вы можете почувствовать себя жителем того чудесного места, в которое ты отправился на этот раз и увезти с собой незабываемые эмоции.
+                                    <br><br>
+                                    Работая над дизайном мы создавали не просто красивые интерьеры, а отдельные, продуманные до мелочей, пространства, куда стремились вложить всю суть совершенства и гармонии.
+                                </p>
+                            </div>
+                            <div class="manif-block__img-container manif-block__img-container_double">
+                                <div class="manif-block__img">
+                                    <img src="@img/manifest/2.png" alt="">
+                                </div>
+                                <div class="manif-block__img">
+                                    <img src="@img/manifest/3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="manif-block manif-block_full manif-block_third">
+                            <div class="manif-block__content">
+                                <p class="manif-block__text">
+                                    Dao dé Rooms – не простые апартаменты, которые можно найти в каждом городе, а квинтэссенция всего лучшего, что нужно искушенному путешественнику. И даже больше.
+                                    <br><br>
+                                    Каждую из студий пронизывает понятие «Дао», отражающее путь к совершенству. Его нельзя достичь, но к нему можно прикоснуться, именно это ощущение мы и постарались передать в наших интерьерах. Путь Дао бесконечен: он есть в каждой эпохе, в каждом уголке мира – и вы сможете почувствовать это, оказавшись в одной из наших студий, наполненных редкими и интересными деталями.                                </p>
+                            </div>
+                            <div class="manif-block__img-container">
+                                <div class="manif-block__img"><img src="@img/manifest/4.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_theme-dark s-quote">
+                <div class="container">
+                    <div class="s-quote__wrap">
+                        <blockquote class="title-section s-quote__title">Dao dé Rooms – это путешествие внутри путешествия. Начните свое уже сегодня!</blockquote>
+                    </div>
+                </div>
+            </section>
+            @@include('./modules/contacts-small.html', { section: 'section' })
+        </div>
+
+@@include('./modules/footer.html')

@@ -1,0 +1,146 @@
+.manif-block {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px 0;
+
+    @media (max-width: $laptop) {
+        flex-direction: column-reverse;
+    }
+
+    &_reverse {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        & .manif-block__content {
+            width: 57%;
+            margin: auto 0 auto 40px;
+
+            @media (max-width: $laptop) {
+                width: 100%;
+                margin: 24px 0 0 0;
+            }
+        }
+
+        & .manif-block__img-container {
+            width: 40%;
+            min-height: 500px;
+
+            @media (max-width: $laptop) {
+                width: 100%;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &_full {
+
+        @media (max-width: $laptop) {
+            flex-direction: column-reverse;
+        }
+
+        & .manif-block__content {
+            width: 39%;
+
+            @media (max-width: $laptop) {
+                width: 100%;
+                max-width: none;
+                margin-top: 32px;
+            }
+        }
+
+        & .manif-block__img-container {
+            max-width: 920px;
+            width: 59%;
+
+            @media (max-width: $laptop) {
+                width: 100%;
+                max-width: none;
+
+                & .manif-block__img {
+
+                    &::before {
+                        padding-top: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.manif-block__content {
+    max-width: 640px;
+    width: 50%;
+    margin: auto 40px auto 0;
+
+    @media (max-width: $laptop) {
+        max-width: none;
+    }
+}
+
+.manif-block__title {
+    color: $firm-color;
+    margin-bottom: 30px;
+}
+
+.manif-block__text {
+
+    @media (max-width: $mobile-l) {
+        // font-size: 14px;
+    }
+}
+
+.manif-block__img-container {
+    width: 50%;
+
+    &_double {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 47px;
+
+        @media (max-width: 1200px) {
+            gap: 16px;
+        }
+
+        @media (max-width: $laptop) {
+            // gap: 24px;
+
+            & .manif-block__img {
+
+                &::before {
+                    padding-top: 140%;
+                }
+            }
+        }
+    }
+}
+
+.manif-block__img {
+    width: 100%;
+    height: 100%;
+
+    & img { 
+        object-fit: cover;
+    }
+
+    @media (max-width: $laptop) {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

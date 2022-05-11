@@ -1,18 +1,74 @@
-.c-room {
+.r-card {
+    position: relative;
     width: 100%;
 
     &:hover {
         
         @media (min-width: $min-hover) {
             
-            & .c-room__style {
-                opacity: 1;
+            & .r-card__style {
+                // opacity: 1;
+            }
+        }
+    }
+
+    &_page {
+     
+        & .r-card__img {
+
+            &::before {
+                padding-top: 59%;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            & img {
+                padding: 0;
+            }
+        }
+
+        & .r-card__location-text {
+            color: $text-primary;
+        }
+
+        & .r-card__body {
+            align-items: flex-start;
+        }
+
+        & .r-card__style {
+            width: 40px;
+            margin-top: 4px;
+         
+            &::after {
+                display: none;
+            }
+        }
+
+        &-style {
+            position: absolute;
+            z-index: 1;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #fff;
+            line-height: 1.2;
+            background: $firm-color;
+            border-radius: 50px;
+            padding: 17px 19px;
+
+            @media (max-width: $mobile-m) {
+                top: 10px;
+                right: 10px;
+                font-size: 12px;
+                padding: 12px 12px;
             }
         }
     }
 }
 
-.c-room__img {
+.r-card__img {
     position: relative;
 
     &::before {
@@ -47,7 +103,7 @@
     }
 }
 
-.c-room__body {
+.r-card__body {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,20 +111,21 @@
 
 }
 
-.c-room__content {
+.r-card__content {
 
 }
 
-.c-room__title {
+.r-card__title {
     font-size: 36px;
     font-weight: 400;
+    line-height: 1.3;
 
     @include res-size(font-size, 26, 36, 1024, 1700);
     @include res-size(font-size, 26, 36, 670, 1024);
     @include res-size-mw(font-size, 20, 36, 320, 670);
 }
 
-.c-room__location {
+.r-card__location {
     display: flex;
     align-items: center;
     margin-top: 12px;
@@ -78,7 +135,7 @@
     }
 }
 
-.c-room__location-icon {
+.r-card__location-icon {
     width: 24px;
 
     @media (max-width: $mobile-m) {
@@ -86,7 +143,7 @@
     }
 }
 
-.c-room__location-text {
+.r-card__location-text {
     font-size: 24px;
     font-weight: 100;
     color: $text-light-second;
@@ -101,10 +158,10 @@
     }
 }
 
-.c-room__style {
+.r-card__style {
     position: relative;
     width: 100px;
-    opacity: 0;
+    // opacity: 0;
     transition: $tr;
 
     @include res-size(width, 80, 100, 1024, 1700);
@@ -141,7 +198,8 @@
         white-space: nowrap;
     }
 
-    & img {
+    & img,
+    & svg {
         position: absolute;
         top: 0;
         left: 0;
@@ -158,7 +216,7 @@
 }
 
 // Подвал
-.c-room__footer {
+.r-card__footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -169,7 +227,7 @@
     @include res-size-mw(margin-top, 16, 40, 320, 670);
 }
 
-.c-room__price {
+.r-card__price {
     font-size: 24px;
     font-weight: 400;
 
@@ -178,7 +236,7 @@
     @include res-size-mw(font-size, 16, 24, 320, 670);
 }
 
-.c-room__more {
+.r-card__more {
     display: flex;
     align-items: center;
     margin-right: 24px;
@@ -188,7 +246,7 @@
     @include res-size-mw(margin-right, 8, 24, 320, 670);
 }
 
-.c-room__more-text {
+.r-card__more-text {
     font-size: 24px;
     font-weight: 100;
 
@@ -197,7 +255,7 @@
     @include res-size-mw(font-size, 15, 24, 320, 670);
 }
 
-.c-room__more-icon {
+.r-card__more-icon {
     position: relative;
     display: inline-block;
     width: 46px;

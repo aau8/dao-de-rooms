@@ -41,7 +41,7 @@ body {
             }
 
             @media (max-width: $mobile-l) {
-                padding-bottom: 0;
+                // padding-bottom: 0;
             }
         }
     }
@@ -68,13 +68,14 @@ body {
 @import "./components/tabs";
 
 // Карточки
-@import "./components/cards/room";
+@import "./components/cards/r-card";
 @import "./components/cards/sr-card";
 @import "./components/cards/ss-card";
 @import "./components/cards/se-card";
 @import "./components/cards/si-card";
 @import "./components/cards/sa-card";
 @import "./components/cards/s-card";
+@import "./components/cards/cv-card";
 
 // Текстовые компоненты
 @import "./components/text";
@@ -103,3 +104,9 @@ body {
 @import "./sections/g-events";
 @import "./sections/service";
 @import "./sections/s-favorite";
+@import "./sections/apartments";
+@import "./sections/cooper";
+@import "./sections/gallery";
+@import "./sections/nfp";
+@import "./sections/manif";
+@import "./sections/s-quote";

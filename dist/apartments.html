@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap&_v=20220511180046" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220511180046">
+</head>
+<body>
+	<div class="wrapper">
+        <header class="header ">
+    <div class="container container_header">
+        <div class="header__wrap">
+            <a href="javascript:void(0)" class="logo header__logo"><img src="./img/logo.svg" alt=""></a>
+            <nav class="menu">
+                <div class="menu__wrap">
+                    <button class="burger burger_close _active">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">Галерея</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__link _active" href="javascript:void(0)">
+                                <span class="menu__link-text">Апатраменты</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">Аренда</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">Дополнительно</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="logo menu__logo"><img src="./img/logo.svg" alt=""></a>
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">Контакты</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">Сотрудничество</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">FAQ</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="javascript:void(0)">
+                                <span class="menu__link-text">Личный кабинет</span> 
+                                <span class="menu__link-hover"><svg width="135" height="51" viewBox="0 0 135 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.8604 12.0003C28.027 13.8336 -8.63964 21.1003 3.36036 35.5003C18.3604 53.5003 113.36 34.5003 116.36 21.5003C119.36 8.50027 85.8604 -4.99973 54.3604 3.50027C22.8604 12.0003 9.36035 48.0002 63.8604 50.0002C107.46 51.6002 129.027 34.6669 134.36 26.0002" stroke="#CBBDAE" stroke-width="0.5"/></svg></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="menu__scribble">
+                        <svg width="429" height="160" viewBox="0 0 429 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M151.222 36.768C87.6414 42.6463 -29.9021 65.9454 8.56669 112.116C56.6527 169.83 361.197 108.91 370.814 67.2279C380.431 25.5459 273.039 -17.7392 172.059 9.51445C71.0784 36.7681 27.8011 152.195 202.513 158.608C342.283 163.738 411.42 109.444 428.517 81.6562" stroke="#CBBDAE" stroke-width="0.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </nav>
+            <button class="burger burger_open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+        <div class="breadcrumbs">
+            <div class="container"> 
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Апартаменты</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content content_pb-l">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrap">
+                        <h1 class="title-section page-header__title">Апартаменты</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="apartments">
+                <div class="container">
+                    <div class="apartments__wrap">
+                        <a href="javascript:void(0)" class="r-card r-card_page">
+                            <div class="r-card__img"><picture><source srcset="./img/rooms/oriental-fusion.webp" type="image/webp"><img src="./img/rooms/oriental-fusion.png" alt=""></picture></div>
+                            <div class="r-card_page-style">Азиатский стиль</div>
+                            <div class="r-card__body">
+                                <div class="r-card__content">
+                                    <h3 class="r-card__title">Oriental Fusion</h3>
+                                    <div class="r-card__location">
+                                        <div class="r-card__location-icon">
+                                            <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.446385 11.7634V11.7986C0.553156 14.8325 1.61863 17.7584 3.49467 20.1691L3.49609 20.1709C5.61778 22.9576 8.22149 25.3553 11.1881 27.2545C11.1966 27.2599 11.2047 27.2659 11.2124 27.2724C11.6646 27.6571 12.3353 27.6571 12.7876 27.2724C12.7954 27.2657 12.8038 27.2596 12.8125 27.254C14.8025 25.9905 16.6374 24.5049 18.2804 22.8269C21.1557 19.8425 23.4743 16.0501 23.5535 11.9707V11.841C23.5752 5.56521 18.4201 0.460421 12.0392 0.439099C5.65848 0.417777 0.468268 5.4878 0.446385 11.7634ZM1.29486e-06 11.7623C0.0225179 5.24404 5.41334 -0.0220761 12.0407 6.95922e-05C18.6679 0.0222146 24.0221 5.32387 23.9999 11.8418C23.9999 11.842 23.9999 11.8422 23.9999 11.8425L23.9999 11.9729L23.9999 11.977C23.9184 16.2132 21.5163 20.1067 18.6039 23.1295L18.6026 23.1308C16.939 24.8299 15.0816 26.3345 13.0673 27.6148C12.4516 28.1285 11.5479 28.1284 10.9323 27.6145C7.92721 25.6888 5.28949 23.2586 3.13946 20.435C1.20668 17.9509 0.10933 14.936 0.000131596 11.8099C4.38654e-05 11.8074 0 11.8049 0 11.8024V11.763L1.29486e-06 11.7623Z" fill="#212020"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.44665C10.0375 8.44665 8.44665 10.0375 8.44665 12C8.44665 13.9625 10.0375 15.5533 12 15.5533C13.9625 15.5533 15.5533 13.9625 15.5533 12C15.5533 10.0375 13.9625 8.44665 12 8.44665ZM8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12Z" fill="#212020"/>
+                                            </svg>
+                                        </div>
+                                        <span class="r-card__location-text">Тигровая улица 16а</span>
+                                    </div>
+                                </div>
+                                <div class="r-card__style">
+                                    <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#212020"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="r-card__footer">
+                                <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="r-card r-card_page">
+                            <div class="r-card__img"><picture><source srcset="./img/rooms/oriental-fusion.webp" type="image/webp"><img src="./img/rooms/oriental-fusion.png" alt=""></picture></div>
+                            <div class="r-card_page-style">Азиатский стиль</div>
+                            <div class="r-card__body">
+                                <div class="r-card__content">
+                                    <h3 class="r-card__title">Oriental Fusion</h3>
+                                    <div class="r-card__location">
+                                        <div class="r-card__location-icon">
+                                            <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.446385 11.7634V11.7986C0.553156 14.8325 1.61863 17.7584 3.49467 20.1691L3.49609 20.1709C5.61778 22.9576 8.22149 25.3553 11.1881 27.2545C11.1966 27.2599 11.2047 27.2659 11.2124 27.2724C11.6646 27.6571 12.3353 27.6571 12.7876 27.2724C12.7954 27.2657 12.8038 27.2596 12.8125 27.254C14.8025 25.9905 16.6374 24.5049 18.2804 22.8269C21.1557 19.8425 23.4743 16.0501 23.5535 11.9707V11.841C23.5752 5.56521 18.4201 0.460421 12.0392 0.439099C5.65848 0.417777 0.468268 5.4878 0.446385 11.7634ZM1.29486e-06 11.7623C0.0225179 5.24404 5.41334 -0.0220761 12.0407 6.95922e-05C18.6679 0.0222146 24.0221 5.32387 23.9999 11.8418C23.9999 11.842 23.9999 11.8422 23.9999 11.8425L23.9999 11.9729L23.9999 11.977C23.9184 16.2132 21.5163 20.1067 18.6039 23.1295L18.6026 23.1308C16.939 24.8299 15.0816 26.3345 13.0673 27.6148C12.4516 28.1285 11.5479 28.1284 10.9323 27.6145C7.92721 25.6888 5.28949 23.2586 3.13946 20.435C1.20668 17.9509 0.10933 14.936 0.000131596 11.8099C4.38654e-05 11.8074 0 11.8049 0 11.8024V11.763L1.29486e-06 11.7623Z" fill="#212020"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.44665C10.0375 8.44665 8.44665 10.0375 8.44665 12C8.44665 13.9625 10.0375 15.5533 12 15.5533C13.9625 15.5533 15.5533 13.9625 15.5533 12C15.5533 10.0375 13.9625 8.44665 12 8.44665ZM8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12Z" fill="#212020"/>
+                                            </svg>
+                                        </div>
+                                        <span class="r-card__location-text">Тигровая улица 16а</span>
+                                    </div>
+                                </div>
+                                <div class="r-card__style">
+                                    <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#212020"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="r-card__footer">
+                                <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="r-card r-card_page">
+                            <div class="r-card__img"><picture><source srcset="./img/rooms/oriental-fusion.webp" type="image/webp"><img src="./img/rooms/oriental-fusion.png" alt=""></picture></div>
+                            <div class="r-card_page-style">Азиатский стиль</div>
+                            <div class="r-card__body">
+                                <div class="r-card__content">
+                                    <h3 class="r-card__title">Oriental Fusion</h3>
+                                    <div class="r-card__location">
+                                        <div class="r-card__location-icon">
+                                            <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.446385 11.7634V11.7986C0.553156 14.8325 1.61863 17.7584 3.49467 20.1691L3.49609 20.1709C5.61778 22.9576 8.22149 25.3553 11.1881 27.2545C11.1966 27.2599 11.2047 27.2659 11.2124 27.2724C11.6646 27.6571 12.3353 27.6571 12.7876 27.2724C12.7954 27.2657 12.8038 27.2596 12.8125 27.254C14.8025 25.9905 16.6374 24.5049 18.2804 22.8269C21.1557 19.8425 23.4743 16.0501 23.5535 11.9707V11.841C23.5752 5.56521 18.4201 0.460421 12.0392 0.439099C5.65848 0.417777 0.468268 5.4878 0.446385 11.7634ZM1.29486e-06 11.7623C0.0225179 5.24404 5.41334 -0.0220761 12.0407 6.95922e-05C18.6679 0.0222146 24.0221 5.32387 23.9999 11.8418C23.9999 11.842 23.9999 11.8422 23.9999 11.8425L23.9999 11.9729L23.9999 11.977C23.9184 16.2132 21.5163 20.1067 18.6039 23.1295L18.6026 23.1308C16.939 24.8299 15.0816 26.3345 13.0673 27.6148C12.4516 28.1285 11.5479 28.1284 10.9323 27.6145C7.92721 25.6888 5.28949 23.2586 3.13946 20.435C1.20668 17.9509 0.10933 14.936 0.000131596 11.8099C4.38654e-05 11.8074 0 11.8049 0 11.8024V11.763L1.29486e-06 11.7623Z" fill="#212020"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.44665C10.0375 8.44665 8.44665 10.0375 8.44665 12C8.44665 13.9625 10.0375 15.5533 12 15.5533C13.9625 15.5533 15.5533 13.9625 15.5533 12C15.5533 10.0375 13.9625 8.44665 12 8.44665ZM8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12Z" fill="#212020"/>
+                                            </svg>
+                                        </div>
+                                        <span class="r-card__location-text">Тигровая улица 16а</span>
+                                    </div>
+                                </div>
+                                <div class="r-card__style">
+                                    <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#212020"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="r-card__footer">
+                                <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="r-card r-card_page">
+                            <div class="r-card__img"><picture><source srcset="./img/rooms/oriental-fusion.webp" type="image/webp"><img src="./img/rooms/oriental-fusion.png" alt=""></picture></div>
+                            <div class="r-card_page-style">Азиатский стиль</div>
+                            <div class="r-card__body">
+                                <div class="r-card__content">
+                                    <h3 class="r-card__title">Oriental Fusion</h3>
+                                    <div class="r-card__location">
+                                        <div class="r-card__location-icon">
+                                            <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.446385 11.7634V11.7986C0.553156 14.8325 1.61863 17.7584 3.49467 20.1691L3.49609 20.1709C5.61778 22.9576 8.22149 25.3553 11.1881 27.2545C11.1966 27.2599 11.2047 27.2659 11.2124 27.2724C11.6646 27.6571 12.3353 27.6571 12.7876 27.2724C12.7954 27.2657 12.8038 27.2596 12.8125 27.254C14.8025 25.9905 16.6374 24.5049 18.2804 22.8269C21.1557 19.8425 23.4743 16.0501 23.5535 11.9707V11.841C23.5752 5.56521 18.4201 0.460421 12.0392 0.439099C5.65848 0.417777 0.468268 5.4878 0.446385 11.7634ZM1.29486e-06 11.7623C0.0225179 5.24404 5.41334 -0.0220761 12.0407 6.95922e-05C18.6679 0.0222146 24.0221 5.32387 23.9999 11.8418C23.9999 11.842 23.9999 11.8422 23.9999 11.8425L23.9999 11.9729L23.9999 11.977C23.9184 16.2132 21.5163 20.1067 18.6039 23.1295L18.6026 23.1308C16.939 24.8299 15.0816 26.3345 13.0673 27.6148C12.4516 28.1285 11.5479 28.1284 10.9323 27.6145C7.92721 25.6888 5.28949 23.2586 3.13946 20.435C1.20668 17.9509 0.10933 14.936 0.000131596 11.8099C4.38654e-05 11.8074 0 11.8049 0 11.8024V11.763L1.29486e-06 11.7623Z" fill="#212020"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.44665C10.0375 8.44665 8.44665 10.0375 8.44665 12C8.44665 13.9625 10.0375 15.5533 12 15.5533C13.9625 15.5533 15.5533 13.9625 15.5533 12C15.5533 10.0375 13.9625 8.44665 12 8.44665ZM8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12Z" fill="#212020"/>
+                                            </svg>
+                                        </div>
+                                        <span class="r-card__location-text">Тигровая улица 16а</span>
+                                    </div>
+                                </div>
+                                <div class="r-card__style">
+                                    <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.4375 15.0576L42.4375 15.0576M42.4375 15.0576L28.3099 0.557617M42.4375 15.0576L28.3099 29.5576" stroke="#212020"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="r-card__footer">
+                                <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+<footer class="footer section_theme-dark">
+    <div class="container container_footer">
+        <div class="footer__wrap">
+            <div class="footer__info">
+                <a href="javascript:void(0)" class="logo footer__logo"><img src="./img/logo.svg" alt=""></a>
+                <span class="footer__copyright">©2021 Dao dé Rooms <br>Все права защищены</span>
+            </div>
+            <div class="footer__body">
+                <div class="footer-block">
+                    <h3 class="footer-block__title">Адрес</h3>
+                    <ul class="footer-block__list footer-block__list-not-links">
+                        <li>Россия, Владивосток</li>
+                        <li>Тигровая 16а, вторая <br>блоксекция, 21 этаж, кв 215</li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h3 class="footer-block__title">Контакты</h3>
+                    <ul class="footer-block__list footer-block__list-not-links">
+                        <li>Без перерывов и выходных</li>
+                        <li>тел. +7 999 059 30 32 <br>daoonline@mail.ru</li>
+                        <li>Мы в Инстаграм</li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h3 class="footer-block__title">Информация</h3>
+                    <ul class="footer-block__list">
+                        <li><a href="javascript:void(0)">О проекте</a></li>
+                        <li><a href="javascript:void(0)">Контакты</a></li>
+                        <li><a href="javascript:void(0)">Сотрудничество</a></li>
+                        <li><a href="javascript:void(0)">Документы</a></li>
+                        <li><a href="javascript:void(0)">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h3 class="footer-block__title">Апатраменты</h3>
+                    <ul class="footer-block__list">
+                        <li><a href="javascript:void(0)">Oriental Fusion</a></li>
+                        <li><a href="javascript:void(0)">Alpine Sunrise</a></li>
+                        <li><a href="javascript:void(0)">Gatsby Lounge</a></li>
+                        <li><a href="javascript:void(0)">Arabian Nights</a></li>
+                        <li><a href="javascript:void(0)">Bali Dreams</a></li>
+                        <li><a href="javascript:void(0)">Pop Art Factory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h3 class="footer-block__title">Аренда</h3>
+                    <ul class="footer-block__list">
+                        <li><a href="javascript:void(0)">Вечеринки</a></li>
+                        <li><a href="javascript:void(0)">Дни рождения</a></li>
+                        <li><a href="javascript:void(0)">Свадьбы</a></li>
+                        <li><a href="javascript:void(0)">Тренинги</a></li>
+                        <li><a href="javascript:void(0)">Корпоративы</a></li>
+                        <li><a href="javascript:void(0)">Фотосьемка</a></li>
+                        <li><a href="javascript:void(0)">Онлайн</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h3 class="footer-block__title">Дополнительно</h3>
+                    <ul class="footer-block__list">
+                        <li><a href="javascript:void(0)">Кальян и кальянный кейтеринг</a></li>
+                        <li><a href="javascript:void(0)">Оформление</a></li>
+                        <li><a href="javascript:void(0)">Организация мероприятий</a></li>
+                        <li><a href="javascript:void(0)">Ведущий на мероприятие</a></li>
+                        <li><a href="javascript:void(0)">Детский аниматор</a></li>
+                        <li><a href="javascript:void(0)">Игра в мафию и настольные игры</a></li>
+                        <li><a href="javascript:void(0)">Фото и видеосъемка </a></li>
+                        <li><a href="javascript:void(0)">Для деловых гостей </a></li>
+                        <li><a href="javascript:void(0)">Прочие услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<button class="btn btn-message" id="open-send-message">
+    <span class="btn-message__icon">
+        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.4373 3.60135L14 11.3986L3.56272 3.60135M2.33129 1.02027C1.97821 1.02027 1.63959 1.16264 1.38992 1.41607C1.14026 1.6695 1 2.01322 1 2.37162V17.6486C1 18.007 1.14026 18.3508 1.38992 18.6042C1.63959 18.8576 1.97821 19 2.33129 19H25.6687C26.0218 19 26.3604 18.8576 26.6101 18.6042C26.8597 18.3508 27 18.007 27 17.6486V2.35135C27 1.99295 26.8597 1.64923 26.6101 1.3958C26.3604 1.14237 26.0218 1 25.6687 1H2.33129V1.02027Z" stroke="#212020" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>            
+    </span>
+    <span class="btn-message__text">Отправьте нам сообщение</span>
+</button> 
+
+</div>
+<script src="./js/bundle.min.js?_v=20220511180046"></script>
+</body>
+</html>

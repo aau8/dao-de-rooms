@@ -1,4 +1,9 @@
+[data-zoom] {
+    cursor: zoom-in;
+}
+
 .big-img {
+    --zoom-img-transition: 300ms;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +17,7 @@
     z-index: 10;
     opacity: 0;
     transition: var(--zoom-img-transition);
+    cursor: zoom-out;
 
     &._show {
         opacity: 1;

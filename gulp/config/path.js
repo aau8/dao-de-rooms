@@ -10,7 +10,7 @@ export default {
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         images: `${buildFolder}/img/`,
-        files: `${buildFolder}/files/`
+        resources: `${buildFolder}/resources/`,
     },
 
     src: {
@@ -19,7 +19,7 @@ export default {
         html: `${srcFolder}/*.html`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `${srcFolder}/img/**/*.svg`,
-        files: `${srcFolder}/files/**/*.*`
+        resources: `${srcFolder}/resources/**/*.*`,
     },
 
     watch: {
@@ -27,7 +27,7 @@ export default {
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
-        files: `${srcFolder}/files/**/*.*`
+        resources: `${srcFolder}/resources/**/*.*`
     },
 
     clean: buildFolder,

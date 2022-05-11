@@ -1,0 +1,269 @@
+.gallery {
+    margin-bottom: 80px;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 50px;
+    }
+}
+
+.gallery__wrap {
+
+}
+
+// Список изображений
+.gallery__grid-sizer {
+    position: absolute;
+    // top: 0;
+    // left: -100vw;
+    // pointer-events: none;
+    // opacity: 0;
+}
+
+// Список табов
+.gallery__tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & .swiper-slide {
+        width: fit-content;
+    }
+}
+
+.gallery-tab {
+    font-size: 20px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    padding: 17px 19px;
+    white-space: nowrap;
+    margin-right: 30px;
+    transition: $tr;
+
+    @media (max-width: $laptop) {
+        margin-right: 20px;
+    }
+
+    @media (max-width: $tablet) {
+        margin-right: 12px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-right: 4px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
+    
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    &._active {
+        border-color: $text-primary;
+    }
+}
+
+.gallery__tabs-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.gallery__tabs-scrollbar {
+    width: 460px;
+    height: 1px;
+    background: create-rgba($text-primary, .5);
+
+    & .swiper-scrollbar-drag {
+        height: 3px;
+        top: -1.5px;
+        background: $text-primary;
+    }
+}
+
+.gallery__tabs-arrows {
+    min-width: 110px;
+    width: fit-content;
+    margin-left: 32px;
+}
+
+.gallery__tabs-arrow {
+    transition: $tr;
+
+    &.swiper-button-disabled {
+        opacity: .3;
+        pointer-events: none;
+    }
+
+    &.swiper-button-lock {
+        display: none;
+    }
+}
+
+// Сетка с изображениями
+.gallery__grid {
+    position: relative;
+    // height: 200px;
+    margin: 100px -20px -40px;
+
+    @media (max-width: $laptop) {
+        margin: 50px -5px -10px;
+    }
+
+    // @media (max-width: $tablet) {
+    //     margin: 50px -5px -10px;
+    // }
+
+    @media (max-width: $mobile-l) {
+        margin: 32px -2px -4px;
+    }
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 32px;
+    //     height: 32px;
+    //     display: block;
+    //     background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 15C30 12.0333 29.1203 9.13318 27.472 6.66645C25.8238 4.19971 23.4811 2.27712 20.7403 1.14181C17.9994 0.0064925 14.9834 -0.290558 12.0736 0.288221C9.16393 0.866999 6.49119 2.29561 4.3934 4.3934C2.29561 6.49119 0.866999 9.16393 0.288221 12.0736C-0.290558 14.9834 0.00649254 17.9994 1.14181 20.7403C2.27712 23.4811 4.19971 25.8238 6.66645 27.472C9.13318 29.1203 12.0333 30 15 30L15 27.75C12.4783 27.75 10.0132 27.0022 7.91648 25.6012C5.81975 24.2002 4.18555 22.209 3.22054 19.8792C2.25552 17.5495 2.00303 14.9859 2.49499 12.5126C2.98695 10.0393 4.20127 7.76751 5.98439 5.98439C7.76751 4.20127 10.0393 2.98695 12.5126 2.49499C14.9859 2.00303 17.5495 2.25552 19.8792 3.22054C22.209 4.18555 24.2002 5.81975 25.6012 7.91648C27.0022 10.0132 27.75 12.4783 27.75 15H30Z\" fill=\"%23213D37\"/%3E%3C/svg%3E");
+    //     opacity: 0;
+    //     pointer-events: none;
+    //     transition: $tr;
+    //     animation: roundLoadGalleryGrid 1s linear infinite;
+
+    //     @keyframes roundLoadGalleryGrid {
+    //         from {
+    //             transform: translate(-50%, -50%) rotate(0);
+    //         }
+
+    //         to {
+    //             transform: translate(-50%, -50%) rotate(360deg);
+    //         }
+    //     }
+    // }
+
+    // &._load {
+    //     // height: 200px;
+
+    //     &::before {
+    //         opacity: 1;
+    //     }
+
+    //     & + .btn-more {
+    //         // opacity: 0;
+    //     }
+    // }
+}
+
+.gallery__grid-empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+    opacity: .8;
+
+    @media (max-width: $tablet) {
+        font-size: 16px;
+    }
+}
+
+.gallery__grid-item,
+.gallery__grid-sizer {
+    width: calc(33.333% - 40px);
+    margin: 0 20px 40px;
+
+    @media (max-width: $laptop) {
+        width: calc(33.333% - 10px);
+        margin: 0 5px 10px;
+    }
+
+    @media (max-width: $tablet) {
+        width: calc(50% - 10px);
+    }
+
+    @media (max-width: $mobile-l) {
+        width: calc(50% - 4px);
+        margin: 0 2px 4px;
+    }
+
+
+    // width: calc(50% - 40px);
+    // margin: 0 20px 40px;
+
+    // @media (max-width: $tablet) {
+    //     width: calc(50% - 10px);
+    //     margin: 0 5px 10px;
+    // }
+
+    // @media (max-width: $mobile-l) {
+    //     width: calc(50% - 4px);
+    //     margin: 0 2px 4px;
+    // }
+
+    & img {
+        object-fit: cover;
+    }
+}
+
+.gallery__grid-item {
+    transform: scale(.9);
+    opacity: 0;
+    transition: .4s;
+
+    &._show {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.gallery__btn-more {
+    position: relative;
+    // display: none;
+    margin: 50px auto 0;
+    transition: color $tr;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 32px;
+        display: block;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 15C30 12.0333 29.1203 9.13318 27.472 6.66645C25.8238 4.19971 23.4811 2.27712 20.7403 1.14181C17.9994 0.0064925 14.9834 -0.290558 12.0736 0.288221C9.16393 0.866999 6.49119 2.29561 4.3934 4.3934C2.29561 6.49119 0.866999 9.16393 0.288221 12.0736C-0.290558 14.9834 0.00649254 17.9994 1.14181 20.7403C2.27712 23.4811 4.19971 25.8238 6.66645 27.472C9.13318 29.1203 12.0333 30 15 30L15 27.75C12.4783 27.75 10.0132 27.0022 7.91648 25.6012C5.81975 24.2002 4.18555 22.209 3.22054 19.8792C2.25552 17.5495 2.00303 14.9859 2.49499 12.5126C2.98695 10.0393 4.20127 7.76751 5.98439 5.98439C7.76751 4.20127 10.0393 2.98695 12.5126 2.49499C14.9859 2.00303 17.5495 2.25552 19.8792 3.22054C22.209 4.18555 24.2002 5.81975 25.6012 7.91648C27.0022 10.0132 27.75 12.4783 27.75 15H30Z\" fill=\"%23213D37\"/%3E%3C/svg%3E");
+        opacity: 0;
+        pointer-events: none;
+        transition: $tr;
+        animation: roundLoadGalleryGrid 1s linear infinite;
+
+        @keyframes roundLoadGalleryGrid {
+            from {
+                transform: translate(-50%, -50%) rotate(0);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    }
+
+    &._load {
+        pointer-events: none;
+
+        & .btn-more__text {
+            opacity: 0;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
