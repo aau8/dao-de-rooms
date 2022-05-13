@@ -6,7 +6,8 @@
     "scripts": {
         "start": "gulp",
         "prod": "gulp prod --production",
-        "prod_not_images": "gulp prodNotImages --production"
+        "prod-ci": "gulp prodCopyImages --production",
+        "build-images": "gulp buildImages"
     },
     "keywords": [],
     "author": "",

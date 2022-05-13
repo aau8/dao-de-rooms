@@ -4,7 +4,7 @@ import del from 'del'
 import htmlBuild from './gulp/tasks/html.js'
 import cssBuild from './gulp/tasks/css.js'
 import jsBuild from './gulp/tasks/js.js'
-import imagesBuild from './gulp/tasks/images.js'
+import { imagesBuild, convertImages, imagesCopy } from './gulp/tasks/images.js'
 import resourcesBuild from './gulp/tasks/resources.js'
 
 const { series, parallel, src, dest, watch } = gulp
@@ -43,6 +43,10 @@ async function cleanDist() {
     await del(`./dist`);
 }
 
+async function cleanConvertingImages() {
+    await del(`./convert-images`);
+}
+
 const tasks = series(
     htmlBuild,
     cssBuild,
@@ -65,14 +69,19 @@ export const prod = series(
     tasks,
 )
 
-export const prodNotImages = series(
+export const prodCopyImages = series(
     cleanDist,
     series(
         htmlBuild,
         cssBuild,
         jsBuild,
+        imagesCopy,
         resourcesBuild,
     )
+)
+
+export const buildImages = series(
+    convertImages
 )
 
 gulp.task('default', dev)
