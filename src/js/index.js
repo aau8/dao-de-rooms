@@ -15,7 +15,9 @@ function menu() {
     const burgerElems = document.querySelectorAll('.burger')
     
     burgerElems.forEach(burger => {
-        burger.addEventListener("click", (e) => {
+        burger.addEventListener("click", e => {
+            e.stopPropagation()
+
             menu.classList.toggle('_show')       
             bodyLock()
         });
