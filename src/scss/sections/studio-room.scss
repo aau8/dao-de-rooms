@@ -1,0 +1,55 @@
+.studio-room__wrap {
+    display: flex;
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+    }
+}
+
+.studio-room__empty,
+.studio-room__img,
+.studio-room__content {
+    width: 33.333%;
+
+    @media (max-width: $tablet) {
+        width: 50%;
+    }
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+.studio-room__empty { 
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.studio-room__img {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.studio-room__content {
+    margin: auto 0 0 40px;
+
+    @media (max-width: 550px) {
+        margin: 24px 0 0 0;
+    }
+}

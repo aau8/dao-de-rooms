@@ -1,0 +1,42 @@
+.studio-concept__body {
+    display: flex;
+
+    @media (max-width: $laptop) {
+        flex-direction: column;
+    }
+}
+.studio-concept__video {
+    max-width: 650px;
+    width: 50%;
+
+    @media (max-width: $laptop) {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.studio-concept__content {
+    width: 50%;
+    margin-left: 140px;
+
+    @media (max-width: 1300px) {
+        margin-left: 60px;
+    }
+
+    @media (max-width: $laptop) {
+        width: 100%;
+        margin: 32px 0 0 0;
+    }
+}
+
+.studio-concept__title {
+
+}
+
+.studio-concept__text {
+    margin-top: 30px;
+
+    @media (max-width: $laptop) {
+        margin-top: 24px;
+    }
+}

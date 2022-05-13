@@ -1,3 +1,33 @@
+.s-reviews {
+
+    &.section_theme-dark {
+
+        & .sr-card__location-icon {
+        
+            & svg path {
+                fill: #CBBDAE;
+            }
+        }
+
+        & .s-reviews__arrow {
+
+            & svg path {
+                stroke: #CBBDAE;
+            }
+        }
+        
+        & .sr-card__rating-star {
+
+            &._active {
+                
+                & svg path {
+                    fill: $text-light;
+                }
+            }
+        }
+    }
+}
+
 .s-reviews__slider {
     max-width: 550px;
     width: 100%;

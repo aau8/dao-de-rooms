@@ -1,0 +1,64 @@
+.studio-bath__wrap {
+    display: flex;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+}
+
+.studio-bath__img,
+.studio-bath__content {
+    width: 33.333%;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+}
+
+.studio-bath__img {
+    position: relative;
+    height: 100%;
+
+    &::before {
+        content: '';
+        display: block;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &_big {
+
+        &::before {
+            padding-top: 132%;
+        }
+    }
+
+    &_small {
+        margin-top: auto;
+
+        &::before {
+            padding-top: 81%;
+        }
+    }
+}
+
+.studio-bath__content {
+    min-width: 350px;
+    padding: 0 40px;
+
+    @media (max-width: 1200px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: $tablet) {
+        padding: 0;
+        margin: 24px 0;
+    }
+}
