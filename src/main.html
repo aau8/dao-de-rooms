@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	<meta name="description" content="Description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
@@ -29,9 +30,9 @@
                                     <div class="select-input">
                                         <div class="select-input__icon"><img src="@img/book/room.svg" alt=""></div>
                                         <span class="select-input__title">Апартаменты</span>
-                                        <div class="select-input__chevron">
+                                        <!-- <div class="select-input__chevron">
                                             <svg><use href='./img/sprite.svg#chevron'></use></svg>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="select-dropdown">
                                         <ul class="select-dropdown__list">
@@ -47,16 +48,17 @@
                                 <hr class="w-book__separator">
                                 <div class="w-book__tf w-book__field">
                                     <div class="w-book__tf-icon"><img src="@img/book/calendar.svg" alt=""></div>
-                                    <input class="w-book__tf-input" type="text" id="date-search">
+                                    <input class="w-book__tf-input" type="text" id="date-search" name="date-search">
+                                    <label for="date-search">Выберите даты проживания</label>
                                 </div>
                                 <hr class="w-book__separator">
                                 <div class="select w-book__field">
                                     <div class="select-input">
                                         <div class="select-input__icon"><img src="@img/book/user.svg" alt=""></div>
                                         <span class="select-input__title">Гости</span>
-                                        <div class="select-input__chevron">
+                                        <!-- <div class="select-input__chevron">
                                             <svg><use href='./img/sprite.svg#chevron'></use></svg>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="select-dropdown">
                                         <ul class="select-dropdown__list">
@@ -76,8 +78,8 @@
                             <div class="w-book__manag">
                                 <div class="tf w-book__promocode">
                                     <div class="tf__field">
-                                        <input type="text">
-                                        <label>Промокод</label>
+                                        <input type="text" id="promocode" name="promocode">
+                                        <label for="promocode">Промокод</label>
                                     </div>
                                 </div>
                                 <button class="btn btn_accent w-book__booking">Забронировать</button>
@@ -112,7 +114,7 @@
                                 </div>
                                 <div class="r-card__footer">
                                     <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
-                                    <a href="javascript:void(0)" class="r-card__more">
+                                    <a href="#" class="r-card__more">
                                         <span class="r-card__more-text">Подробнее</span>
                                         <span class="r-card__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
                                     </a>
@@ -132,7 +134,7 @@
                                 </div>
                                 <div class="r-card__footer">
                                     <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
-                                    <a href="javascript:void(0)" class="r-card__more">
+                                    <a href="#" class="r-card__more">
                                         <span class="r-card__more-text">Подробнее</span>
                                         <span class="r-card__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
                                     </a>
@@ -152,7 +154,7 @@
                                 </div>
                                 <div class="r-card__footer">
                                     <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
-                                    <a href="javascript:void(0)" class="r-card__more">
+                                    <a href="#" class="r-card__more">
                                         <span class="r-card__more-text">Подробнее</span>
                                         <span class="r-card__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
                                     </a>
@@ -172,7 +174,7 @@
                                 </div>
                                 <div class="r-card__footer">
                                     <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
-                                    <a href="javascript:void(0)" class="r-card__more">
+                                    <a href="#" class="r-card__more">
                                         <span class="r-card__more-text">Подробнее</span>
                                         <span class="r-card__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
                                     </a>
@@ -192,7 +194,7 @@
                                 </div>
                                 <div class="r-card__footer">
                                     <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
-                                    <a href="javascript:void(0)" class="r-card__more">
+                                    <a href="#" class="r-card__more">
                                         <span class="r-card__more-text">Подробнее</span>
                                         <span class="r-card__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
                                     </a>
@@ -212,7 +214,7 @@
                                 </div>
                                 <div class="r-card__footer">
                                     <div class="r-card__price"><span>5 000</span> ₽ за ночь</div>
-                                    <a href="javascript:void(0)" class="r-card__more">
+                                    <a href="#" class="r-card__more">
                                         <span class="r-card__more-text">Подробнее</span>
                                         <span class="r-card__more-icon"><img src="./img/icons/arrow-more.svg" alt=""></span>
                                     </a>
@@ -236,7 +238,7 @@
                 <div class="container">
                     <div class="tp__wrap">
                         <div class="tp__body">
-                            <a href="javascript:void(0)" class="tp__block tp-manif">
+                            <a href="#" class="tp__block tp-manif">
                                 <div class="tp-manif__content">
                                     <h2 class="title-section tp-manif__title">Путешествия – <br> это наша страсть</h2>
                                     <p class="tp-manif__text">Мы совершаем более 50 перелетов в год, десятки стран, сотни отелей: от сегмента Luxe и сетевых гигантов, до уютных домиков в отдаленных уголках света. Мы научились замечать по-настоящему важные детали и понимать, что именно нужно путешественнику вдали от дома.</p>
@@ -272,7 +274,7 @@
                                     <img src="@img/tp/6.png" alt="" data-zoom>
                                 </div>
                             </div>
-                            <a href="javascript:void(0)" class="tp__block tp-gallery">
+                            <a href="#" class="tp__block tp-gallery">
                                 <div class="tp-gallery__content">
                                     <h3 class="tp-gallery__title">Посмотреть <br>галерею</h3>
                                     <p class="tp-gallery__text">Ознакомьтесь с галереей наших объектов. Мы уверены что вы найдёте что то для себя и влюбитесь в наши апартаменты!</p>
@@ -403,12 +405,12 @@
                                     </div>
                                 </div>
                                 <div class="swiper__arrows s-reviews__arrows">
-                                    <button class="swiper__arrow s-reviews__arrow s-reviews__arrow-prev">
+                                    <button class="swiper__arrow s-reviews__arrow s-reviews__arrow-prev" aria-label="Предыдущий слайдер">
                                         <svg width="138" height="41" viewBox="0 0 138 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M137.5 20.5L1.50001 20.5M1.50001 20.5L21.072 40M1.50001 20.5L21.072 0.99999" stroke="#CBBDAE"/>
                                         </svg>                                            
                                     </button>
-                                    <button class="swiper__arrow s-reviews__arrow s-reviews__arrow-next">
+                                    <button class="swiper__arrow s-reviews__arrow s-reviews__arrow-next" aria-label="Следующий слайдер">
                                         <svg width="137" height="41" viewBox="0 0 137 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 20.5H136M136 20.5L116.428 1M136 20.5L116.428 40" stroke="#CBBDAE"/>
                                         </svg>                                            
@@ -436,7 +438,7 @@
                                                 <h3 class="sap-slide__title">В Dao dé Rooms есть балкон?</h3>
                                                 <p class="sap-slide__text">Студия как захватывающее приключение из  прошлого в будущее с максимальным комфортом</p>
                                             </div>
-                                            <a href="javascript:void(0)" class="spa-slide__more">
+                                            <a href="#" class="spa-slide__more">
                                                 <span class="spa-slide__more-text">Подробнее</span>
                                                 <div class="spa-slide__more-icon">
                                                     <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -452,7 +454,7 @@
                                                 <h3 class="sap-slide__title">В Dao dé Rooms есть балкон?</h3>
                                                 <p class="sap-slide__text">Студия как захватывающее приключение из с максимальным комфортом</p>
                                             </div>
-                                            <a href="javascript:void(0)" class="spa-slide__more">
+                                            <a href="#" class="spa-slide__more">
                                                 <span class="spa-slide__more-text">Подробнее</span>
                                                 <div class="spa-slide__more-icon">
                                                     <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -468,7 +470,7 @@
                                                 <h3 class="sap-slide__title">В Dao dé Rooms есть балкон?</h3>
                                                 <p class="sap-slide__text">Студия как захватывающее приключение из с максимальным комфортом</p>
                                             </div>
-                                            <a href="javascript:void(0)" class="spa-slide__more">
+                                            <a href="#" class="spa-slide__more">
                                                 <span class="spa-slide__more-text">Подробнее</span>
                                                 <div class="spa-slide__more-icon">
                                                     <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +486,7 @@
                                                 <h3 class="sap-slide__title">В Dao dé Rooms есть балкон?</h3>
                                                 <p class="sap-slide__text">Студия как захватывающее приключение из с максимальным комфортом</p>
                                             </div>
-                                            <a href="javascript:void(0)" class="spa-slide__more">
+                                            <a href="#" class="spa-slide__more">
                                                 <span class="spa-slide__more-text">Подробнее</span>
                                                 <div class="spa-slide__more-icon">
                                                     <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -500,7 +502,7 @@
                                                 <h3 class="sap-slide__title">В Dao dé Rooms есть балкон?</h3>
                                                 <p class="sap-slide__text">Студия как захватывающее приключение из с максимальным комфортом</p>
                                             </div>
-                                            <a href="javascript:void(0)" class="spa-slide__more">
+                                            <a href="#" class="spa-slide__more">
                                                 <span class="spa-slide__more-text">Подробнее</span>
                                                 <div class="spa-slide__more-icon">
                                                     <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,7 +518,7 @@
                                                 <h3 class="sap-slide__title">В Dao dé Rooms есть балкон?</h3>
                                                 <p class="sap-slide__text">Студия как захватывающее приключение из с максимальным комфортом</p>
                                             </div>
-                                            <a href="javascript:void(0)" class="spa-slide__more">
+                                            <a href="#" class="spa-slide__more">
                                                 <span class="spa-slide__more-text">Подробнее</span>
                                                 <div class="spa-slide__more-icon">
                                                     <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -530,12 +532,12 @@
                             </div>
                             <div class="sap__list sap__pagination_pc"></div>
                             <div class="sap__arrows sap__arrows_pc">
-                                <button class="sap__arrow sap__arrow_prev">
+                                <button class="sap__arrow sap__arrow_prev" aria-label="Предыдущий слайдер">
                                     <svg width="137" height="41" viewBox="0 0 137 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M136.5 20.5L1 20.5M1 20.5L20.5 40M1 20.5L20.5 0.99999" stroke="#213D37"/>
                                     </svg>                                            
                                 </button>
-                                <button class="sap__arrow sap__arrow_next">
+                                <button class="sap__arrow sap__arrow_next" aria-label="Следующий слайдер">
                                     <svg width="137" height="41" viewBox="0 0 137 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 20.5H135.5M135.5 20.5L116 1M135.5 20.5L116 40" stroke="#213D37"/>
                                     </svg>                                            
@@ -578,12 +580,12 @@
                         </div>
                     </div>
                     <div class="sap__arrows sap__arrows_mobile">
-                        <button class="sap__arrow sap__arrow_prev">
+                        <button class="sap__arrow sap__arrow_prev" aria-label="Предыдущий слайдер">
                             <svg width="137" height="41" viewBox="0 0 137 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M136.5 20.5L1 20.5M1 20.5L20.5 40M1 20.5L20.5 0.99999" stroke="#213D37"/>
                             </svg>                                            
                         </button>
-                        <button class="sap__arrow sap__arrow_next">
+                        <button class="sap__arrow sap__arrow_next" aria-label="Следующий слайдер">
                             <svg width="137" height="41" viewBox="0 0 137 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 20.5H135.5M135.5 20.5L116 1M135.5 20.5L116 40" stroke="#213D37"/>
                             </svg>                                            
@@ -601,39 +603,39 @@
                             </div>
                         </div>
                         <div class="s-services__body">
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/1.png" alt=""></div>
                                 <h3 class="ss-card__title">Кальян и кальянный кейтеринг</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/2.png" alt=""></div>
                                 <h3 class="ss-card__title">Кухня, кейтеринг и персонал</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/3.png" alt=""></div>
                                 <h3 class="ss-card__title">Сомелье и винные дегустации</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/4.png" alt=""></div>
                                 <h3 class="ss-card__title">Ведущий на мероприятие</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/5.png" alt=""></div>
                                 <h3 class="ss-card__title">Выездной бар</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/6.png" alt=""></div>
                                 <h3 class="ss-card__title">Фото и видеосъемка</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/7.png" alt=""></div>
                                 <h3 class="ss-card__title">Оформление</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card">
+                            <a href="#" class="ss-card">
                                 <div class="ss-card__img"><img src="@img/services/8.png" alt=""></div>
                                 <h3 class="ss-card__title">Организация мероприятий</h3> 
                             </a>
-                            <a href="javascript:void(0)" class="ss-card ss-card_reverse">
+                            <a href="#" class="ss-card ss-card_reverse">
                                 <h3 class="ss-card__title">Смотреть весь <br>список услуг</h3> 
                                 <div class="ss-card__arrow">
                                     <svg width="98" height="31" viewBox="0 0 98 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -654,7 +656,7 @@
                             </div>
                         </div>
                         <div class="s-events__body">
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Вечеринки</h3>
                                     <p class="se-card__text">
@@ -667,7 +669,7 @@
                                 </div>
                                 <div class="se-card__bg"><img src="@img/events/1.png" alt=""></div>
                             </a>
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Дни рождения</h3>
                                     <p class="se-card__text">
@@ -677,7 +679,7 @@
                                 </div>
                                 <div class="se-card__bg"><img src="@img/events/2.png" alt=""></div>
                             </a>
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Свадьбы</h3>
                                     <p class="se-card__text">
@@ -687,7 +689,7 @@
                                 </div>
                                 <div class="se-card__bg"><img src="@img/events/3.png" alt=""></div>
                             </a>
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Тренинги</h3>
                                     <p class="se-card__text">
@@ -697,7 +699,7 @@
                                 </div>
                                 <div class="se-card__bg"><img src="@img/events/4.png" alt=""></div>
                             </a>
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Корпоратив и тимбилдинг</h3>
                                     <p class="se-card__text">
@@ -708,7 +710,7 @@
                                 </div>
                                 <div class="se-card__bg"><img src="@img/events/5.png" alt=""></div>
                             </a>
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Фотосесъёмка</h3>
                                     <p class="se-card__text">
@@ -718,7 +720,7 @@
                                 </div>
                                 <div class="se-card__bg"><img src="@img/events/6.png" alt=""></div>
                             </a>
-                            <a href="javascript:void(0)" class="se-card">
+                            <a href="#" class="se-card">
                                 <div class="se-card__content">
                                     <h3 class="se-card__title">Онлайн <br>мероприятия</h3>
                                     <p class="se-card__text">
@@ -747,26 +749,26 @@
                                 </svg>
                             </div>
                             <div class="s-insta__list">
-                                <a href="javascript:void(0)" class="si-card">
+                                <a href="#" class="si-card" aria-label="1 фото из нашего инстаграма">
                                     <div class="si-card__img"><img src="@img/insta/1.png" alt=""></div>
                                 </a>
-                                <a href="javascript:void(0)" class="si-card">
+                                <a href="#" class="si-card" aria-label="2 фото из нашего инстаграма">
                                     <div class="si-card__img"><img src="@img/insta/2.png" alt=""></div>
                                 </a>
-                                <a href="javascript:void(0)" class="si-card">
+                                <a href="#" class="si-card" aria-label="3 фото из нашего инстаграма">
                                     <div class="si-card__img"><img src="@img/insta/3.png" alt=""></div>
                                 </a>
-                                <a href="javascript:void(0)" class="si-card">
+                                <a href="#" class="si-card" aria-label="4 фото из нашего инстаграма">
                                     <div class="si-card__img"><img src="@img/insta/4.png" alt=""></div>
                                 </a>
-                                <a href="javascript:void(0)" class="si-card">
+                                <a href="#" class="si-card" aria-label="5 фото из нашего инстаграма">
                                     <div class="si-card__img"><img src="@img/insta/5.png" alt=""></div>
                                 </a>
-                                <a href="javascript:void(0)" class="si-card">
+                                <a href="#" class="si-card" aria-label="6 фото из нашего инстаграма">
                                     <div class="si-card__img"><img src="@img/insta/6.png" alt=""></div>
                                 </a>
                             </div>
-                            <a href="javascript:void(0)" class="s-insta__link">
+                            <a href="#" class="s-insta__link">
                                 <span class="s-insta__link-text">Перейти в аккаунт</span>
                                 <div class="s-insta__link-icon">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -822,7 +824,7 @@
                                     <li>тел. <a href="tel:+79990593032">+7 999 059 30 32</a></li>
                                     <li>Email: <a href="mailto:daoonline@mail.ru">daoonline@mail.ru</a></li>
                                 </ul>
-                                <a href="javascript:void(0)" class="sc-us__insta">
+                                <a href="#" class="sc-us__insta">
                                     <div class="sc-us__insta-icon">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0.666667H6C3.05448 0.666667 0.666667 3.05448 0.666667 6V14C0.666667 16.9455 3.05448 19.3333 6 19.3333H14C16.9455 19.3333 19.3333 16.9455 19.3333 14V6C19.3333 3.05448 16.9455 0.666667 14 0.666667ZM6 0C2.68629 0 0 2.68629 0 6V14C0 17.3137 2.68629 20 6 20H14C17.3137 20 20 17.3137 20 14V6C20 2.68629 17.3137 0 14 0H6Z" fill="#CBBDAE"/>
@@ -842,26 +844,26 @@
                                 <div class="sc-quest__tf-list">
                                     <div class="tf">
                                         <div class="tf__field">
-                                            <input type="text">
-                                            <label>Имя</label>
+                                            <input type="text" id="user-name" name="user-name">
+                                            <label for="user-name">Имя</label>
                                         </div>
                                     </div>
                                     <div class="tf">
                                         <div class="tf__field">
-                                            <input type="text">
-                                            <label>E-mail</label>
+                                            <input type="text" id="user-email" name="user-email">
+                                            <label for="user-email">E-mail</label>
                                         </div>
                                     </div>
                                     <div class="tf">
                                         <div class="tf__field">
-                                            <input type="text">
-                                            <label>Телефон</label>
+                                            <input type="text" id="user-phone" name="user-phone">
+                                            <label for="user-phone">Телефон</label>
                                         </div>
                                     </div>
                                     <div class="tf">
                                         <div class="tf__field tf__field_textarea">
-                                            <textarea></textarea>
-                                            <label>Комментарий</label>
+                                            <textarea id="user-message" name="user-message"></textarea>
+                                            <label for="user-message">Комментарий</label>
                                         </div>
                                     </div>
                                 </div>
@@ -883,7 +885,7 @@
                     </div>
                     <div class="s-location__body">
                         <div class="s-location__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/-/CCUFRNf~~C" width="560" height="400" allowfullscreen></iframe>
+                            <iframe src="https://yandex.ru/map-widget/v1/-/CCUFRNf~~C" title="Яндекс карта с местоположением нашего офиса" width="560" height="400" allowfullscreen></iframe>
                         </div>
                         <div class="s-location__mainland"><img src="@img/map/mainland.png" alt=""></div>
                     </div>

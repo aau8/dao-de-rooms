@@ -1,6 +1,8 @@
 .breadcrumbs {
     padding: 24px 0;
     overflow-x: auto;
+
+    @include scrollbar(100%, 4px)
 }
 
 .breadcrumbs__list {

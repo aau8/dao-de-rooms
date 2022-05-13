@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<meta name="description" content="Description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@100;300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('./modules/header.html', { mod: '' })
+        <div class="breadcrumbs">
+            <div class="container"> 
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="link" href="#">Апартаменты</a></li>
+                    <li class="breadcrumbs__item">Oriental Fusion</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content content_pb-l">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrap">
+                        <h1 class="title-section page-header__title">Студия Oriental Fusion</h1>
+                    </div>
+                </div>
+            </section>
+            <div class="studio-main">
+                <div class="container">
+                    <div class="studio-main__wrap">
+                        <div class="video-block" data-video="" data-video-thumb="@img/services/services-main.png" data-video-src="https://www.youtube.com/embed/BciS5krYL80" data-video-autoplay>
+                            <button class="video-block__play">
+                                <svg width="46" height="53" viewBox="0 0 46 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M46 26.5L0.249998 52.9138L0.25 0.0862235L46 26.5Z" fill="white"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <div class="studio-main__services">
+                            <div class="studio-service">
+                                <div class="studio-service__icon"><img src="@img/studio/icons/wifi.svg" alt=""></div>
+                                <span class="studio-service__title">Бесплатный Wi-Fi</span>
+                            </div>
+                            <div class="studio-service">
+                                <div class="studio-service__icon"><img src="@img/studio/icons/trail.svg" alt=""></div>
+                                <span class="studio-service__title">Можно с питомцами</span>
+                            </div>
+                            <div class="studio-service">
+                                <div class="studio-service__icon"><img src="@img/studio/icons/family.svg" alt=""></div>
+                                <span class="studio-service__title">Семейные номера</span>
+                            </div>
+                            <div class="studio-service">
+                                <div class="studio-service__icon"><img src="@img/studio/icons/not-smoking.svg" alt=""></div>
+                                <span class="studio-service__title">Номера для некурящих</span>
+                            </div>
+                            <div class="studio-service">
+                                <div class="studio-service__icon"><img src="@img/studio/icons/not-contact.svg" alt=""></div>
+                                <span class="studio-service__title">Бесконтактное заселение</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="section l-things">
+                <div class="container">
+                    <div class="l-things__wrap">
+                        <div class="l-things__body">
+                            <div class="lt-main">
+                                <div class="lt-main__img-container" data-room="Ванная комната">
+                                    <div class="lt-main__img"><img src="@img/studio/little-things/1.png" alt=""></div>
+                                </div>
+                                <div class="lt-main__content">
+                                    <span class="lt-main__label">100% эксклюзивный <br>дизайн интерьера</span>
+                                    <span class="lt-main__style">Арт Деко</span>
+                                    <h2 class="lt-main__title">В мелочах</h2>
+                                    <p class="lt-main__text">Дизайн в мелочах, каждая деталь интерьера была продумана так чтобы вы могли оказаться в том времени и той моды.</p>
+                                </div>
+                            </div>
+                            <div class="lt-second">
+                                <div class="lt-second__img"><img src="@img/studio/little-things/2.png" alt=""></div>
+                                <div class="lt-second__content">
+                                    <h3 class="lt-second__title">Стиль Гэтсби</h3>
+                                    <p class="lt-second__text">
+                                        Понятие, появившееся вслед за выходом романа великого американского писателя Фрэнсиса Скотта Фицджеральда "Великий Гэтсби".
+                                        <br>
+                                        Богатство, роскошь, перья, стразы, шик и блеск, одним словом, настоящий "гламур" 20-ых годов 20-го столетия - именно так можно описать атмосферу, которым окутано всё произведение "Великий Гэтсби". 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="studio-advant">
+                <div class="container">
+                    <div class="studio-advant__wrap">
+                        <div class="studio-advant__img"><img src="@img/studio/advantages/1.png" alt=""></div>
+                        <div class="studio-advant__content">
+                            <ul class="studio-list studio-advant__list">
+                                <li>Лифт для доступа к верхним этажам</li>
+                                <li>Частная квартира в многоквартирном здании</li>
+                                <li>Размер апартаментов: 32 м²</li>
+                                <li>Балкон с видом на море, горы, город и достопримечательности</li>
+                                <li>Отопление и кондиционер</li>
+                                <li>Отопление и кондиционер</li>
+                                <li>Кухонные принадлежности, микроволновая печь, плита и кофемашина</li>
+                                <li>Гардеробная, шкаф или гардероб</li>
+                                <li>Доступны смежные номера</li>
+                                <li>Установлены очистители воздуха</li>
+                                <li>Курение запрещено</li>
+                            </ul>
+                        </div>
+                        <div class="studio-advant__img"><img src="@img/studio/advantages/2.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section studio-include">
+                <div class="container">
+                    <div class="studio-include__wrap">
+                        <div class="studio-include__img">
+                            <picture>
+                                <source media="(max-width: 425px)" srcset="@img/studio/include/mobile.png">
+                                <source media="(max-width: 768px)" srcset="@img/studio/include/tablet.png">
+                                <source media="(max-width: 1024px)" srcset="@img/studio/include/laptop.png">
+                                <img src="@img/studio/include/laptop-large.png" alt="">
+                            </picture>
+                        </div>
+                        <!-- <div class="studio-include__content">
+                            <div class="si-block">
+                                <div class="si-block__icon"><img src="@img/studio/icons/info.svg" alt=""></div>
+                                <div class="si-block__content">
+                                    <h3 class="si-block__title">Техника</h3>
+                                    <p class="si-block__text">Большой холодильник, микроволновая печь, посудомоечная машина, плита с духовым шкафом всё чтобы вы чувствовали себя как дома.</p>
+                                </div>
+                            </div>
+                            <div class="si-block">
+                                <div class="si-block__icon"><img src="@img/studio/icons/info.svg" alt=""></div>
+                                <div class="si-block__content">
+                                    <h3 class="si-block__title">Посуда</h3>
+                                    <p class="si-block__text">Большой комплект посуды для разных предпочтений и задач</p>
+                                </div>
+                            </div>
+                            <div class="si-block">
+                                <div class="si-block__icon"><img src="@img/studio/icons/info.svg" alt=""></div>
+                                <div class="si-block__content">
+                                    <h3 class="si-block__title">Мебель</h3>
+                                    <p class="si-block__text">Удобная мебель как для малой так и для большой компании</p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            @@include('./modules/contacts-small.html', { section: 'section_s' })
+        </div>
+
+@@include('./modules/footer.html')

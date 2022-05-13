@@ -6,7 +6,7 @@
 
 }
 
-.services-main__video {
+.video-block {
     position: relative;
     width: 100%;
     min-height: 250px;
@@ -17,14 +17,14 @@
         
         &:hover {
             
-            & .services-main__video-play {
+            & .video-block__play {
                 transform: translate(-50%, -50%) scale(1.1);
             }
         }
 
         &:active {
             
-            & .services-main__video-play {
+            & .video-block__play {
                 transform: translate(-50%, -50%) scale(1);
             }
         }
@@ -32,7 +32,7 @@
 
     &:active {
         
-        & .services-main__video-play {
+        & .video-block__play {
             transform: translate(-50%, -50%) scale(.9);
         }
     }
@@ -61,14 +61,14 @@
             visibility: hidden;
         }
 
-        & .services-main__video-play {
+        & .video-block__play {
             opacity: 0;
             visibility: hidden;
         }
     }
 }
 
-.services-main__video-play {
+.video-block__play {
     position: absolute;
     z-index: 1;
     top: 50%;

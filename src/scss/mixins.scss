@@ -13,16 +13,17 @@
 }
  
 // Стиль скроллбара
-@mixin scrollbar($width: 16px, $thumb: #cecece, $track: transparent) {
-    body::-webkit-scrollbar {
+@mixin scrollbar($width: 16px, $height: 100%, $thumb: #cecece, $track: transparent) {
+    &::-webkit-scrollbar {
         width: $width;
+        height: $height;
     }
-     
-    body::-webkit-scrollbar-track {
+    
+    &::-webkit-scrollbar-track {
         background: $track;
     }
     
-    body::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb {
         background-color: $thumb;
     }
 }
