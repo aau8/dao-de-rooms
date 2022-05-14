@@ -20,7 +20,7 @@
         // min-height: 600px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
         justify-content: initial;
         padding: 277px 0 100px 0;
     }
@@ -57,14 +57,14 @@
         height: 116px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
         height: auto;
     }
 }
 
 .main__row-empty {
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
         display: none;
     }
 }
@@ -76,7 +76,7 @@
     color: #fff;
     text-align: center;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
         margin-bottom: 95px;
     }
 }
@@ -151,7 +151,7 @@
         padding: 0 26px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
         flex-direction: column;
         padding: 30px 24px;
     }
@@ -173,7 +173,7 @@
     
     & > .w-book__field {
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1160px) {
             flex: 1 1 0;
         }
 
@@ -188,7 +188,7 @@
         }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
         margin-left: 0;
     }
 
@@ -221,7 +221,7 @@
 
     &-last {
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1160px) {
             display: none;
         }
     }
@@ -233,13 +233,49 @@
     }
 }
 
+.w-book__field-search {
+    position: relative;
+
+    & input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    @media (max-width: 1160px) {
+        min-width: 290px;
+    }
+
+    @media (max-width: 800px) {
+        min-width: auto;
+    }
+}
+
+.date-search__value {
+    min-width: 160px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding-left: 48px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+    }
+}
+
 .w-book__manag {
-    // width: 20%;
+    width: 53%;
     display: flex;
     align-items: center;
     margin-left: 25px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
+        width: 100%;
+        justify-content: center;
         margin: 16px 0 0 0;
     }
 }
@@ -296,17 +332,21 @@
 }
 
 .w-book__promocode {
-    // max-width: 220px;
-    // width: 100%;
-    width: 220px;
+    max-width: 220px;
+    width: 100%;
+    // width: 220px;
     height: 56px;
 
     @media (max-width: 1200px) {
-        width: 130px;
+        max-width: 130px;
+    }
+
+    @media (max-width: 1160px) {
+        max-width: 220px;
     }
 
     @media (max-width: $mobile-l) {
-        width: 113px;
+        max-width: 113px;
     }
 
     @media (max-width: $mobile-m) {

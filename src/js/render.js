@@ -14,35 +14,46 @@ if (document.getElementById('date-search')) {
     
     calendarSearchInput.addEventListener('keypress', e => e.preventDefault() )
     
+    calendarSearchInput.addEventListener('input', e => {
+        console.log(calendarSearchInput.value)
+    })
     const calendarSearch = new AirDatepicker(calendarSearchInput, {
         autoClose: true,
         range: true,
         multipleDatesSeparator: ' - ',
         dateFormat: 'dd/MM/yyyy',
         minDate: startDate,
-        selectedDates: [startDate, endDate],
+        // selectedDates: [startDate, endDate],
     
         onSelect: e => {
-            console.log(e)
-            setWidthInputSearchCalendar()
+            const input = e.datepicker.$el
+            const dateValueElem = input.parentElement.querySelector('.date-search__value')
+
+            dateValueElem.innerText = input.value
+            console.log(input.value)
+
+
+            // setWidthInputSearchCalendar()
         },
     
-        onRenderCell: e => {
-            console.log('onRenderCell', e)
-        },
+        // onRenderCell: e => {
+        //     console.log('onRenderCell', e)
+        // },
     
-        onShow: e => {
-            console.log('onShow', e)
-        },
+        // onShow: e => {
+        //     console.log('onShow', e)
+        // },
     
-        onHide: e => {
-            console.log('onHide', e)
-        },
+        // onHide: e => {
+        //     console.log('onHide', e)
+        // },
     
-        onChangeView: e => {
-            console.log('onChangeView', e)
-        },
+        // onChangeView: e => {
+        //     console.log('onChangeView', e)
+        // },
     })
+
+    calendarSearch.selectDate([startDate, endDate])
     
     // setWidthInputSearchCalendar()
     function setWidthInputSearchCalendar() {
