@@ -155,6 +155,16 @@
     display: flex;
     align-items: center;
     margin: 33px 0 0 auto;
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            
+            & .spa-slide__more-icon {
+                transform: translateX(6px);
+            }
+        }
+    }
 }
 
 .spa-slide__more-text {
@@ -166,6 +176,7 @@
     width: 100%;
     height: 39px;
     margin-left: 8px;
+    transition: $tr;
 }
 
 // Пагинация
@@ -259,14 +270,28 @@
 .sap__arrow {
     max-width: 135px;
     width: 100%;
+    transition: $tr;
 }
 
 .sap__arrow_prev {
 
+    // @media (any-hover: hover) {
+        
+    //     &:hover {
+    //         transform: translateX(-6px);
+    //     }
+    // }
 }
 
 .sap__arrow_next {
     margin-left: 30px;
+
+    // @media (any-hover: hover) {
+        
+    //     &:hover {
+    //         transform: translateX(6px);
+    //     }
+    // }
 }
 
 // Пагинация на мобиле

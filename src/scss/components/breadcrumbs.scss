@@ -40,5 +40,23 @@
 
     & a {
         opacity: .5;
+        transition: $tr;
+
+        &:active {
+            color: $firm-color;
+            opacity: 1;
+        }
+
+        @media (any-hover: hover) {
+            
+            &:hover {
+                color: $firm-color;
+                opacity: 1;
+            }
+
+            &:active {
+                opacity: .8;
+            }
+        }
     }
 }

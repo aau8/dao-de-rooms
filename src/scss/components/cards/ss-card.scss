@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     border: 1px solid $text-light;
+    transition: $tr;
 
     &_reverse {
         justify-content: space-between;
@@ -11,6 +12,21 @@
 
         @media (max-width: $laptop) {
             padding: 0 30px;
+        }
+    }
+
+    &:active {
+        transform: scale(.97);
+    }
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &:active {
+            transform: scale(1);
         }
     }
 }

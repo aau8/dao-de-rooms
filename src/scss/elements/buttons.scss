@@ -11,6 +11,7 @@
     border-radius: 5px;
     transition: $tr;
     white-space: nowrap;
+    user-select: none;
 
     @media (max-width: $mobile-m) {
         // width: 168px;
@@ -20,12 +21,48 @@
 
 .btn_light {
     background: #fff;
+    border: 1px solid transparent;
     color: $firm-color;
+
+    &:active {
+        background: create-rgba(#fff, .7);
+    }
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        &:active {
+            background: create-rgba(#fff, .1);
+        }
+    }
 }
 
 .btn_accent {
     background: $firm-color;
+    border: 1px solid transparent;
     color: #fff;
+
+    &:active {
+        background: create-rgba($firm-color, .9);
+    }
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            background: transparent;
+            color: $firm-color;
+            border-color: $firm-color;
+        }
+
+        &:active {
+            background: create-rgba($firm-color, .1);
+        }
+    }
 }
 
 .link-menu {
@@ -44,21 +81,6 @@
 
     &:active {
         color: $link-active;
-    }
-}
-
-.link {
-    transition: $tr;
-
-    &:hover {
-        
-        @media (min-width: $min-hover) {
-            color: $firm-color;
-        }
-    }
-
-    &:active {
-        color: brig-color($firm-color, 30%);
     }
 }
 

@@ -43,10 +43,6 @@ async function cleanDist() {
     await del(`./dist`);
 }
 
-async function cleanConvertingImages() {
-    await del(`./convert-images`);
-}
-
 const tasks = series(
     htmlBuild,
     cssBuild,

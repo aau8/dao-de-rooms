@@ -7,22 +7,18 @@ import "./tabs.js"
 import "./gallery.js"
 
 // Меню
-window.addEventListener('resize', menu)
-
 menu()
 function menu() { 
     const menu = document.querySelector('.menu')
     const burgerElems = document.querySelectorAll('.burger')
     
-    burgerElems.forEach(burger => {
+    for (const burger of burgerElems) {
         burger.addEventListener("click", e => {
             e.stopPropagation()
 
             menu.classList.toggle('_show')       
             bodyLock()
         });
-    })
-    if (window.innerWidth <= 1100) {
     }
 }
 

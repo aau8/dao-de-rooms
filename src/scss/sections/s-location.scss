@@ -6,19 +6,19 @@
     position: relative;
     width: 100%;
 
-    &::before {
-        content: '';
-        display: block;
-        padding-top: 37%;
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     padding-top: 37%;
 
-        @media (max-width: $laptop) {
-            padding-top: 42%;
-        }
+    //     @media (max-width: $laptop) {
+    //         padding-top: 42%;
+    //     }
 
-        @media (max-width: $mobile-l) {
-            padding-top: 59%;
-        }
-    }
+    //     @media (max-width: $mobile-l) {
+    //         padding-top: 59%;
+    //     }
+    // }
 
     & iframe {
         position: absolute;
@@ -26,6 +26,10 @@
         left: 0;
         width: 100%;
         height: 100%;
+    }
+
+    & ymaps {
+        // height: 550px !important;
     }
 }
 
