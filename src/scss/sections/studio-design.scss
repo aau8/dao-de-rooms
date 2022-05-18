@@ -77,9 +77,7 @@
 
     @media (max-width: 1250px) {
         display: grid;
-        // grid-template-rows: auto;
         grid-template-columns: repeat(2, minmax(min-content, 360px));
-        // grid-auto-flow: column;
         gap: 30px 50px;
     }
 

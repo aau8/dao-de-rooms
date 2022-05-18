@@ -75,11 +75,9 @@ if (document.querySelector('.gallery')) {
     // Добавление изображений при загрузке страницы
     async function addImagesWhenLoadingPage(cat) {
         galleryGrid.removeAttribute('style')
-        // galleryGrid.classList.add('_load')
         clearGalleryGrid()
         showButtonMore()
         loadButtonMore()
-        // hideButtonMore()
     
         await fetch('./resources/gallery.json')
             .then(res => res.json())
@@ -129,9 +127,7 @@ if (document.querySelector('.gallery')) {
     
                     if (!showed) return item
                 })
-                
-                // console.log(imagesNotShowed)
-    
+                    
                 const loadImages = imagesNotShowed.slice(0, 6).map(item => {
                     return `<div class="gallery__grid-item" data-gallery-id="${item.id}" data-gallery-cat="${item.cat}"><img src="${item.format.another}" alt="" data-zoom></div>`
                 }).join('')

@@ -1,6 +1,5 @@
 import { find, bodyLock } from './utilities/functions.js'
 
-// modal()
 function modal() {
 
     // Открытие модальных окон при клике по кнопке

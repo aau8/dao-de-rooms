@@ -47,10 +47,6 @@
     }
 }
 
-.sr-card__header {
-
-}
-
 .sr-card__name {
     font-size: 20px;
     font-weight: 400;
@@ -100,29 +96,9 @@
 .sr-card__location-icon {
     width: 22px;
     height: 22px;
-
-    & svg path {
-        // fill: #CBBDAE;
-    }
 }
 
 .sr-card__location-text {
     opacity: .5;
     margin-left: 15px;
-}
-
-.s-reviews__arrow {
-    // height: 39px;
-
-    // &:not(:last-child) {
-    //     margin-right: 30px;
-    // }
-}
-
-.s-reviews__arrow-prev {
-
-}
-
-.s-reviews__arrow-next {
-
 }

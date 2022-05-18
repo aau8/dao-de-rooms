@@ -44,8 +44,6 @@
     height: 40px;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
-    // border-bottom: 2px solid #EEF1FF;
     padding: 0;
     cursor: pointer;
 }
@@ -54,13 +52,11 @@
     min-width: 30px;
     width: 30px;
     height: 30px;
-    // width: 100%;
 }
 
 .select-input__title {
     font-size: 18px;
     font-weight: 300;
-    // color: $input-placeholder;
     pointer-events: none;
     margin-left: 18px;
 

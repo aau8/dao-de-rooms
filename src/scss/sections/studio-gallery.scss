@@ -6,7 +6,6 @@
 .studio-gallery__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-auto-rows: 290px;
     gap: 50px 40px;
 
     @media (max-width: 1200px) {

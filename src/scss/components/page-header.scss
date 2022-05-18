@@ -1,5 +1,4 @@
 .page-header {
-    // margin-top: 24px;
     margin: 24px 0 50px;
 
     @media (max-width: $mobile-l) {
@@ -15,8 +14,4 @@
     @media (max-width: $laptop) {
         padding-bottom: 10px;
     }
-}
-
-.page-header__title {
-
 }

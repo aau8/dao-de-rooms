@@ -14,57 +14,22 @@ if (document.getElementById('date-search')) {
     
     calendarSearchInput.addEventListener('keypress', e => e.preventDefault() )
     
-    calendarSearchInput.addEventListener('input', e => {
-        console.log(calendarSearchInput.value)
-    })
     const calendarSearch = new AirDatepicker(calendarSearchInput, {
         autoClose: true,
         range: true,
         multipleDatesSeparator: ' - ',
         dateFormat: 'dd/MM/yyyy',
         minDate: startDate,
-        // selectedDates: [startDate, endDate],
     
         onSelect: e => {
             const input = e.datepicker.$el
             const dateValueElem = input.parentElement.querySelector('.date-search__value')
 
             dateValueElem.innerText = input.value
-            console.log(input.value)
-
-
-            // setWidthInputSearchCalendar()
         },
-    
-        // onRenderCell: e => {
-        //     console.log('onRenderCell', e)
-        // },
-    
-        // onShow: e => {
-        //     console.log('onShow', e)
-        // },
-    
-        // onHide: e => {
-        //     console.log('onHide', e)
-        // },
-    
-        // onChangeView: e => {
-        //     console.log('onChangeView', e)
-        // },
     })
 
     calendarSearch.selectDate([startDate, endDate])
-    
-    // setWidthInputSearchCalendar()
-    function setWidthInputSearchCalendar() {
-        const value = calendarSearchInput.value
-        const domElem = document.createElement('div')
-    
-        domElem.innerText = value
-    
-        console.log(domElem, value)
-        console.log(domElem.clientWidth)
-    }
 }
 
 // Эффект наведения на ссылки в меню
@@ -185,83 +150,3 @@ function select() {
         }
     })
 }
-
-// window.addEventListener('click', e => {
-//     const target = e.target
-
-//     if (target.nodeName == 'INPUT') {
-//         textfieldRemoveError(target.closest('.tf'))
-//     }
-// })
-
-// const formSignIn = document.querySelector('#form-sign-in')
-// const signInInputElems = formSignIn.querySelectorAll('.tf input[data-tf-required]')
-
-// formSignIn.addEventListener('submit', async e => {
-//     let validForm = true
-//     e.preventDefault()
-    
-//     // Проверка на пустоту
-//     signInInputElems.forEach(input => {
-//         if (textfieldEmpty(input)) {
-//             validForm = false
-//         }
-//     })
-    
-//     if (validForm === false) {
-//         console.log('Форма не до конца заполнена!')
-//         return
-//     }
-
-//     const formData = new FormData(formSignIn)
-//     const formAction = formSignIn.getAttribute('action')
-
-//     const response = await fetch(formAction, {
-//         method: 'POST',
-//         body: formData,
-//     })
-
-//     if (response.ok) {
-//         resetForm(formSignIn)
-//     }
-//     else {
-
-//         setTimeout(e => {
-
-//             console.error("Ошибка HTTP: " + response.status)
-//         }, 2000)
-//     }
-// })
-
-// function resetForm(form) {
-//     form.reset()
-
-//     const tfElems = form.querySelectorAll('.tf')
-
-//     for (let i = 0; i < tfElems.length; i++) {
-//         const tf = tfElems[i]
-//         const tfLabel = tf.querySelector('label')
-        
-//         tfLabel.classList.remove('_change-label')
-//     }
-// }
-
-// // Если пустое поле...
-// function textfieldEmpty(textfield) {
-//     if (textfield.value.trim() == '') {
-//         textfieldAddError(textfield.closest('.tf'), 'Поле не должно быть пустым')
-//         return true
-//     }
-// }
-
-// // Добавить ошибку
-// function textfieldAddError(textfield, errorText) {
-//     textfield.dataset.textfieldError = errorText
-//     textfield.classList.add('_textfield-error')
-// }
-
-// // Удалить ошибку
-// function textfieldRemoveError(textfield) {
-//     textfield.removeAttribute('data-textfield-error')
-//     textfield.classList.remove('_textfield-error')
-// }

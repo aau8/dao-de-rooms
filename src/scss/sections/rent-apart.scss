@@ -25,10 +25,6 @@
         @media (max-width: $tablet) {
             margin-bottom: 50px;
         }
-
-        @media (max-width: $mobile-l) {
-            // margin-bottom: 30px;
-        }
     }
 
     &_reverse {
@@ -122,22 +118,18 @@
     }
 
     &_fourth {
-        // flex-wrap: wrap;
 
         & .ra-block__img,
         & .ra-block__content {
             flex: 1 1 0;
-            // min-width: 510px;
         }
 
         & .ra-block__img {
-            // max-width: 510px;
             margin-right: 40px;
         }
 
         & .ra-block__content {
             margin: 0;
-            // max-width: 510px;
 
             &:not(:last-child) {
                 margin-right: 40px;

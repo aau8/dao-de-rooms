@@ -23,7 +23,6 @@
 
         & .manif-block__img-container {
             width: 40%;
-            // min-height: 500px;
 
             @media (max-width: $laptop) {
                 width: 100%;
@@ -83,13 +82,6 @@
     margin-bottom: 30px;
 }
 
-.manif-block__text {
-
-    @media (max-width: $mobile-l) {
-        // font-size: 14px;
-    }
-}
-
 .manif-block__img-container {
     width: 50%;
 
@@ -105,15 +97,6 @@
 
         @media (max-width: $laptop) {
             grid-auto-rows: auto;
-            // gap: 24px;
-
-            & .manif-block__img {
-                // aspect-ratio: .4;
-
-                // &::before {
-                //     // padding-top: 140%;
-                // }
-            }
         }
     }
 }
@@ -128,20 +111,5 @@
 
     @media (max-width: $laptop) {
         aspect-ratio: .6;
-        // position: relative;
-
-        // &::before {
-        //     content: '';
-        //     display: block;
-        //     padding-top: 100%;
-        // }
-
-        & img {
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 100%;
-            // height: 100%;
-        }
     }
 }

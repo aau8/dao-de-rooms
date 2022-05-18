@@ -1,13 +1,10 @@
 import Swiper, { Navigation, EffectFade, Thumbs, Autoplay, Pagination, FreeMode, Scrollbar } from 'swiper'
-// import 'swiper/css'
-// import 'swiper/css/effect-fade'
 
 const sReviewsSlider = new Swiper('.s-reviews__slider', {
     modules: [EffectFade, Navigation],
 
     slidesPerView: 1,
     loop: true,
-    // allowTouchMove: false,
 
     effect: 'fade',
     fadeEffect: {
@@ -25,7 +22,6 @@ if (document.querySelector('.sap-slide')) {
         modules: [EffectFade, Navigation],
     
         slidesPerView: 1,
-        // loop: true,
         allowTouchMove: false,
     
         effect: 'fade',

@@ -10,7 +10,6 @@
         height: 100vh;
         display: flex;
         justify-content: flex-end;
-        // background: $firm-color;
         background: rgba(0,0,0,.8);
         overflow-y: auto;
         overflow-x: hidden;
@@ -81,7 +80,6 @@
 
         @media (max-width: $hide-menu) {
             width: 100%;
-            // text-align: center;
         }
     }
 }
@@ -160,7 +158,6 @@
     pointer-events: none;
 
     @media (max-width: $hide-menu) {
-        // transform: translate(-50%, -50%) scale(1.2);
         display: none;
     }
 
@@ -184,7 +181,6 @@
     @media (max-width: $hide-menu) {
         display: block;
         position: absolute;
-        // z-index: -1;
         bottom: 0;
         left: 50%;
         transform: translate(-32%, 0) rotate(135deg);

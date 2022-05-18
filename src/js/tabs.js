@@ -15,12 +15,10 @@ function accFAQ() {
       const accBody = accHeader.nextElementSibling
 
       parent.classList.toggle('_show') 
-      // accHeader.classList.toggle('_show') 
       
       if (accBody.style.maxHeight) { 
         accBody.style.maxHeight = null
         parent.classList.remove('_show') 
-        // accHeader.classList.remove('_show') 
       }
       else {
         const adjacentElems = getSiblings(parent)

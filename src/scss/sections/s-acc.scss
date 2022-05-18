@@ -11,8 +11,6 @@
 
             @media (max-width: $laptop) {
                 max-width: 300px;
-                // max-width: 288px;
-                // min-width: 250px;
             }
 
             @media (max-width: $tablet) {
@@ -39,8 +37,6 @@
 
             @media (max-width: $laptop) {
                 max-width: 300px;
-                // max-width: 288px;
-                // min-width: 250px;
             }
 
             @media (max-width: $tablet) {
@@ -55,10 +51,6 @@
             }
         }
     }
-}
-
-.s-acc__header {
-
 }
 
 .s-acc__header-title {
@@ -76,7 +68,6 @@
 
 .s-acc__body {
     display: flex;
-    // align-items: flex-start;
     margin-top: 30px;
 
     @media (max-width: $tablet) {

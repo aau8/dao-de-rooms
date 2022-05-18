@@ -1,6 +1,5 @@
 import { find, findAll, removeAll, bodyLock } from "./utilities/functions.js";
 import "./render.js";
-// import "./menu.js";
 import "./modals.js";
 import "./sliders.js";
 import "./tabs.js"
@@ -33,11 +32,8 @@ function zoomInImg() {
         if (target.getAttribute('data-zoom') != null) {
             const imgSrc = target.getAttribute("src")
             const bigImg = document.createElement("div")
-
-            // console.log(target.naturalWidth)
         
             bigImg.classList.add("big-img")
-            // bigImg.style.cursor = "zoom-out"
             bigImg.style.setProperty('--zoom-img-transition', TR + 'ms')
         
             bigImg.innerHTML = `<div class="big-img__body" data-zoom-out><img src="${imgSrc}" style="max-width:${target.naturalWidth}px;" alt=""></div>`

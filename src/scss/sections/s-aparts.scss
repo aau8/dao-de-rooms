@@ -10,7 +10,6 @@
 
     @media (max-width: $tablet) {
         flex-direction: column;
-        // padding: 0 20px;
     }
 }
 
@@ -31,7 +30,6 @@
 
     @media (max-width: $tablet) {
         position: relative;
-        // height: 500px;
 
         &::before {
             content: '';
@@ -98,10 +96,6 @@
     @media (max-width: $tablet) {
         margin-top: 30px;
     }
-}
-
-.sap__content {
-
 }
 
 .sap-slide {
@@ -273,25 +267,8 @@
     transition: $tr;
 }
 
-.sap__arrow_prev {
-
-    // @media (any-hover: hover) {
-        
-    //     &:hover {
-    //         transform: translateX(-6px);
-    //     }
-    // }
-}
-
 .sap__arrow_next {
     margin-left: 30px;
-
-    // @media (any-hover: hover) {
-        
-    //     &:hover {
-    //         transform: translateX(6px);
-    //     }
-    // }
 }
 
 // Пагинация на мобиле
@@ -304,17 +281,8 @@
     }
 }
 
-.swiper-wrapper {
-
-}
-
-.swiper-slide {
-
-}
-
 .sat-slide {
     width: 180px;
-    // width: fit-content;
     display: flex;
     justify-content: center;
 
@@ -329,7 +297,6 @@
 
 .sat-slide__btn {
     font-size: 20px;
-    // color: $firm-color;
     opacity: .2;
     padding: 0 10px;
 }

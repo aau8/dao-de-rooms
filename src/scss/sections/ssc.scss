@@ -1,6 +1,5 @@
 .ssc__body {
     display: flex;
-    // align-items: flex-start;
     justify-content: space-between;
 
     @media (max-width: $tablet) {
@@ -22,34 +21,6 @@
             width: 100%;
             max-width: none;
         }
-
-        // & .sc-title {
-        //     font-weight: 300;
-        // }
-
-        // & .sc-quest__tf-list {
-            
-        //     & > .tf {
-
-        //         &:not(:last-child) {
-        //             margin-bottom: 4px;
-        //         }
-
-        //         & input,
-        //         & textarea {
-        //             font-size: 16px;
-        //             padding-top: 20px;
-        //         }
-
-        //         & label {
-        //             font-size: 16px;
-        //         }
-
-        //         & .tf__field_textarea {
-        //             height: 60px;
-        //         }
-        //     }
-        // }
     }
 
     & .sc-us {
