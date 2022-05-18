@@ -23,7 +23,7 @@
 
         & .manif-block__img-container {
             width: 40%;
-            min-height: 500px;
+            // min-height: 500px;
 
             @media (max-width: $laptop) {
                 width: 100%;
@@ -61,10 +61,7 @@
                 max-width: none;
 
                 & .manif-block__img {
-
-                    &::before {
-                        padding-top: 50%;
-                    }
+                    aspect-ratio: 1.75;
                 }
             }
         }
@@ -99,6 +96,7 @@
     &_double {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(500px, 1fr);
         gap: 47px;
 
         @media (max-width: 1200px) {
@@ -106,13 +104,15 @@
         }
 
         @media (max-width: $laptop) {
+            grid-auto-rows: auto;
             // gap: 24px;
 
             & .manif-block__img {
+                // aspect-ratio: .4;
 
-                &::before {
-                    padding-top: 140%;
-                }
+                // &::before {
+                //     // padding-top: 140%;
+                // }
             }
         }
     }
@@ -120,26 +120,28 @@
 
 .manif-block__img {
     width: 100%;
+    height: auto;
 
     & img { 
         object-fit: cover;
     }
 
     @media (max-width: $laptop) {
-        position: relative;
+        aspect-ratio: .6;
+        // position: relative;
 
-        &::before {
-            content: '';
-            display: block;
-            padding-top: 100%;
-        }
+        // &::before {
+        //     content: '';
+        //     display: block;
+        //     padding-top: 100%;
+        // }
 
         & img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            // height: 100%;
         }
     }
 }

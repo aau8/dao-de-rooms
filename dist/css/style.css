@@ -4732,7 +4732,6 @@ body._lock {
 
 .manif-block_reverse .manif-block__img-container {
   width: 40%;
-  min-height: 500px;
 }
 
 .manif-block_full .manif-block__content {
@@ -4764,11 +4763,13 @@ body._lock {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(500px, 1fr);
   gap: 47px;
 }
 
 .manif-block__img {
   width: 100%;
+  height: auto;
 }
 
 .manif-block__img img {
@@ -6486,34 +6487,20 @@ body._lock {
     max-width: none;
   }
 
-  .manif-block_full .manif-block__img-container .manif-block__img::before {
-    padding-top: 50%;
+  .manif-block_full .manif-block__img-container .manif-block__img {
+    aspect-ratio: 1.75;
   }
 
   .manif-block__content {
     max-width: none;
   }
 
-  .manif-block__img-container_double .manif-block__img::before {
-    padding-top: 140%;
+  .manif-block__img-container_double {
+    grid-auto-rows: auto;
   }
 
   .manif-block__img {
-    position: relative;
-  }
-
-  .manif-block__img::before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
-
-  .manif-block__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 0.6;
   }
 
   .ra-block_second .ra-block__img {
